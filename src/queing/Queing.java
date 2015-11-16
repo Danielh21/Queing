@@ -7,7 +7,7 @@ package queing;
 
 /**
  *
- * @author Daniel
+ * @author Daniel & Henrik
  */
 public class Queing {
 
