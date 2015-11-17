@@ -5,6 +5,9 @@
  */
 package queing;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Daniel & Henrik
@@ -16,7 +19,7 @@ public class Queing {
      */
     public static void main(String[] args) {
         
-        
+        JOptionPane.showMessageDialog(null,"Wattup 1337'5");
         // This is a test - Daniel Hollmann
         // this is a test - Peter Henriksen
     }
