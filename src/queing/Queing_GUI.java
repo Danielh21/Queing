@@ -17,7 +17,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     public Queing_GUI() {
         initComponents();
         jPanelHome.setVisible(true);
-        jPanelMap.setVisible(false);
+        jPanelMap.setVisible(true);
         
  
         
@@ -88,16 +88,16 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelMapLayout.setHorizontalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMapLayout.createSequentialGroup()
-                .addGap(169, 169, 169)
+                .addGap(174, 174, 174)
                 .addComponent(jLabelMap)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         jPanelMapLayout.setVerticalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMapLayout.createSequentialGroup()
-                .addGap(117, 117, 117)
+                .addContainerGap()
                 .addComponent(jLabelMap)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jLayeredPaneLayout = new javax.swing.GroupLayout(jLayeredPane);
@@ -149,13 +149,13 @@ public class Queing_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMapActionPerformed
-        jLabelMap.setVisible(true);
-        jLabelHome.setVisible(false);
+        jPanelHome.setVisible(false);
+        jPanelMap.setVisible(true);
     }//GEN-LAST:event_jButtonMapActionPerformed
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        jLabelHome.setVisible(true);
-        jLabelMap.setVisible(false);
+        jPanelMap.setVisible(false);
+        jPanelHome.setVisible(true);
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     /**
