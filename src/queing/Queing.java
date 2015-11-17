@@ -18,7 +18,7 @@ public class Queing {
         
         
         // This is a test - Daniel Hollmann
-        //this is a test - Peter Henriksen
+        // this is a test - Peter Henriksen
     }
     
 }
