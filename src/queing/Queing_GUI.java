@@ -132,9 +132,11 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(531, Short.MAX_VALUE))
         );
 
+        jPanelMap.setBackground(new java.awt.Color(255, 72, 12));
         jPanelMap.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelMap.setPreferredSize(new java.awt.Dimension(414, 290));
 
+        jLabelMap.setBackground(new java.awt.Color(255, 72, 12));
         jLabelMap.setText("MAP");
 
         javax.swing.GroupLayout jPanelMapLayout = new javax.swing.GroupLayout(jPanelMap);
@@ -143,15 +145,15 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMapLayout.createSequentialGroup()
                 .addGap(177, 177, 177)
-                .addComponent(jLabelMap)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(jLabelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanelMapLayout.setVerticalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMapLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabelMap)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         jPanelQuiz.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
