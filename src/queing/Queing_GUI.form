@@ -39,7 +39,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="502" max="32767" attributes="0"/>
+          <Component id="jPanelButtons" alignment="0" pref="502" max="32767" attributes="0"/>
           <Component id="jLayeredPane" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
@@ -48,7 +48,7 @@
           <Group type="102" alignment="1" attributes="0">
               <Component id="jLayeredPane" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="90" max="-2" attributes="0"/>
+              <Component id="jPanelButtons" min="-2" pref="90" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -124,7 +124,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelCounter" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -146,8 +146,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelPic_Orange" min="-2" pref="222" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="63" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jLabelCounter" min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="78" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -170,7 +170,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="jLabelCounter">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="18" style="1"/>
@@ -238,30 +238,45 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
-                      <Component id="jLabelMap" pref="317" max="32767" attributes="0"/>
+                  <Component id="jLabePic_Map" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelMap" min="-2" pref="500" max="-2" attributes="0"/>
+                      <EmptySpace pref="93" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jLabelMap" min="-2" pref="415" max="-2" attributes="0"/>
-                      <EmptySpace pref="131" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabelMap" min="-2" pref="86" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabePic_Map" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabelMap">
+            <Component class="javax.swing.JLabel" name="jLabePic_Map">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c" green="48" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="MAP"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Pics/Roskilde.jpg"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelMap">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Verdana" size="36" style="3"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; Map over Roskilde Festival&#xa;&#xa;&lt;/html&gt;"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -284,7 +299,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
                       <Component id="jLabelQuiz" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="293" max="32767" attributes="0"/>
+                      <EmptySpace pref="295" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -324,19 +339,44 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-                      <Component id="jLabelInfo" min="-2" pref="65" max="-2" attributes="0"/>
-                      <EmptySpace pref="222" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="jButtonInfo_GeneralInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelInfo" min="-2" pref="251" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jButtonInfo_Artist" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Component id="jButtonInfo_Schedule" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="84" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jLabelInfo" min="-2" pref="44" max="-2" attributes="0"/>
-                      <EmptySpace pref="481" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="jLabelInfo" min="-2" pref="69" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonInfo_GeneralInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonInfo_Schedule" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonInfo_Artist" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -344,14 +384,197 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabelInfo">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Verdana" size="36" style="3"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Info"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="jButtonInfo_GeneralInfo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="General Info"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInfo_GeneralInfoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonInfo_Schedule">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Schedule"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInfo_ScheduleActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonInfo_Artist">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Artist"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInfo_ArtistActionPerformed"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jPanelInfo_GeneralInfo" alignment="1" max="32767" attributes="0"/>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Component id="jPanelInfo_Artist" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                          <Component id="jPanelInfo_Schedule" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jPanelInfo_GeneralInfo" alignment="0" pref="406" max="32767" attributes="0"/>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Component id="jPanelInfo_Artist" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                          <Component id="jPanelInfo_Schedule" alignment="0" pref="406" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="jPanelInfo_Artist">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane2" alignment="0" pref="486" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane2" alignment="0" pref="406" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                      <Properties>
+                        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jTextAreaArtist">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="14" style="3"/>
+                            </Property>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Micheal Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson (29. august 1958 &#x2013; 25. juni 2009)&#xa;med tilnavnet &quot;Kongen af Pop&quot; var en amerikansk musiker &#xa;og en af de mest kommercielt succesrige entertainere.&#xa;Hans unikke bidrag til musik og dans og hans privatliv, &#xa;gjorde ham til en fremtr&#xe6;dende figur inden for &#xa;popul&#xe6;rkulturen i fire &#xe5;rtier.&#xa;&#xa;Han er to gange optaget i Rock and Roll Hall of Fame, &#xa;har flere rekorder i Guinness Rekordbog &#x2014; deriblandt &#xa;&quot;Mest succesrige entertainer nogensinde&quot; &#x2014; &#xa;13 Grammy Awards, 13 singler som har ligget nr. 1 p&#xe5; &#xa;hitlisten i USA, og et ansl&#xe5;et samlet salgstal p&#xe5; over &#xa;750 millioner plader. Han var en betydelig filantropisk og&#xa; humanit&#xe6;r sponsor af mange millioner dollars til 39 &#xa;velg&#xf8;renhedsorganisationer og skaffede ogs&#xe5; bidrag via &#xa;sin egen Heal the World Foundation.&#xa;&#xa;&#xa;&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelInfo_GeneralInfo">
+                  <Properties>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[486, 385]"/>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" alignment="0" pref="486" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" alignment="1" pref="406" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                      <Properties>
+                        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jTextAreaInfo">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="14" style="3"/>
+                            </Property>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="text" type="java.lang.String" value="Roskilde Festival is the largest North Europeanculture and &#xa;music festival and has existed since 1971. &#xa;We are a non-profit organisation &#xa;consisting of about 50 full-time employees and thousands &#xa;of volunteers.&#xa;&#xa;Volunteers&#xa;During the festival the number of volunteers increases to &#xa;about 32,000. The volunteers staff&#xa;the festival stalls, build stages, &#xa;provide camping security etc.&#xa;&#xa;Non-profit society behind the festival&#xa;Roskilde Festival Charity Society is the organiserof &#xa;Roskilde Festival.&#xa;The purpose of the society is to support initiatives &#xa;benefitting children and young people and to support &#xa;humanitarian and cultural work. The society&apos;s work is &#xa;independent of party politics and has no geographical &#xa;borders"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelInfo_Schedule">
+                  <Properties>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[486, 385]"/>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane3" alignment="0" pref="486" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane3" alignment="0" pref="406" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                      <Properties>
+                        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="jTextAreaSchedule">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Verdana" size="14" style="3"/>
+                            </Property>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="text" type="java.lang.String" value="**************THE SCHEDULE*****************&#xa;&#xa;&#xa;ORANGE:&#xa; Thursday:&#xa;10.00 Sys Bjerre&#xa;13.00 Magtens Kooridor&#xa;17.00 Eminiem&#xa;&#xa;&#xa;Friday:&#xa;15.00 Big Stock&#xa;18.00 Rasmus Seebach&#xa;21.00 Bruce &quot;The Boss&quot;&#xa;&#xa;&#xa;Saturday:&#xa;14.00 Selena Gomez&#xa;16.00 Michael Jackson (Hologram)&#xa;01.00 Suspect&#xa;&#xa;COSMOPOL:&#xa;&#xa;Thursday:&#xa;12.00 Ray Charles&#xa;16.00 Kim Larsen&#xa;19.00 Shubidua&#xa;&#xa;Friday:&#xa;12.00 Eddie Van Helen&#xa;16.00 ABBA&#xa;21.00 Spice Girls&#xa;&#xa;Saturday:&#xa;12.00 Jay-Z&#xa;15.00 Beyonce&#xa;19.00 BackStreet Boys&#xa;&#xa;ARENA:&#xa;&#xa;Thursday:&#xa;13.00 Kennth&#xa;16.00 &#xa;&#xa;Friday:&#xa;&#xa;Saturday:&#xa;"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="jPanelButtons">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
         <Property name="columns" type="int" value="0"/>
