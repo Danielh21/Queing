@@ -40,10 +40,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonHome = new javax.swing.JButton();
-        jButtonMap = new javax.swing.JButton();
-        jButtonCampInfo = new javax.swing.JButton();
-        jButtonQuiz = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jLayeredPane = new javax.swing.JLayeredPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHome = new javax.swing.JLabel();
@@ -53,42 +50,17 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelMap = new javax.swing.JLabel();
         jPanelQuiz = new javax.swing.JPanel();
         jLabelQuiz = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButtonHome = new javax.swing.JButton();
+        jButtonMap = new javax.swing.JButton();
+        jButtonCampInfo = new javax.swing.JButton();
+        jButtonQuiz = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Roskilde Festival");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
         setSize(new java.awt.Dimension(458, 354));
-
-        jButtonHome.setText("Home");
-        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHomeActionPerformed(evt);
-            }
-        });
-
-        jButtonMap.setText("Map");
-        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMapActionPerformed(evt);
-            }
-        });
-
-        jButtonCampInfo.setText("Camp Info");
-        jButtonCampInfo.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonCampInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCampInfoActionPerformed(evt);
-            }
-        });
-
-        jButtonQuiz.setText("Enter Quiz");
-        jButtonQuiz.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonQuiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonQuizActionPerformed(evt);
-            }
-        });
 
         jPanelHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelHome.setPreferredSize(new java.awt.Dimension(414, 290));
@@ -100,7 +72,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelHomeLayout.setHorizontalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelHomeLayout.createSequentialGroup()
-                .addContainerGap(264, Short.MAX_VALUE)
+                .addContainerGap(465, Short.MAX_VALUE)
                 .addComponent(jLabelHome))
         );
         jPanelHomeLayout.setVerticalGroup(
@@ -108,7 +80,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jPanelHomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelHome)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addContainerGap(586, Short.MAX_VALUE))
         );
 
         jPanelCamp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -183,55 +155,90 @@ public class Queing_GUI extends javax.swing.JFrame {
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+            .addGap(0, 616, Short.MAX_VALUE)
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
+                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
+                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
+                .addGroup(jLayeredPaneLayout.createSequentialGroup()
+                    .addComponent(jPanelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
         );
         jLayeredPane.setLayer(jPanelHome, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane.setLayer(jPanelCamp, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane.setLayer(jPanelMap, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane.setLayer(jPanelQuiz, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        jButtonHome.setText("Home");
+        jButtonHome.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonHome.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonHome);
+
+        jButtonMap.setText("Map");
+        jButtonMap.setAlignmentY(0.0F);
+        jButtonMap.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonMap.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jButtonMap.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMapActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonMap);
+
+        jButtonCampInfo.setText("Camp Info");
+        jButtonCampInfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonCampInfo.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButtonCampInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCampInfoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonCampInfo);
+
+        jButtonQuiz.setText("Enter Quiz");
+        jButtonQuiz.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonQuiz.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButtonQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuizActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonQuiz);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLayeredPane)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonMap, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonCampInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonMap, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCampInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -310,9 +317,11 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMap;
     private javax.swing.JLabel jLabelQuiz;
     private javax.swing.JLayeredPane jLayeredPane;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelCamp;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelMap;
     private javax.swing.JPanel jPanelQuiz;
+    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
