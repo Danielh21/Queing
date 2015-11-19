@@ -176,6 +176,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(540, Short.MAX_VALUE))
         );
 
+        jPanelInfo.setBackground(new java.awt.Color(255, 72, 12));
         jPanelInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelInfo.setPreferredSize(new java.awt.Dimension(414, 290));
 
