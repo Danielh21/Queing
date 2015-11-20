@@ -42,6 +42,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        jComboBox1 = new javax.swing.JComboBox();
         jLayeredPane = new javax.swing.JLayeredPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHome = new javax.swing.JLabel();
@@ -49,6 +50,35 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelCounter = new javax.swing.JLabel();
         jPanelCamp = new javax.swing.JPanel();
         jLabelCamp = new javax.swing.JLabel();
+        jLayeredInternal_Camp = new javax.swing.JLayeredPane();
+        jPanelCamp_Register_User = new javax.swing.JPanel();
+        jLabelUserName = new javax.swing.JLabel();
+        jLabelPassword = new javax.swing.JLabel();
+        jButtonLoginUser = new javax.swing.JButton();
+        jButtonRegisterUser = new javax.swing.JButton();
+        jTextFieldUserName = new javax.swing.JTextField();
+        jPasswordField = new javax.swing.JPasswordField();
+        jPanelCamp_Register_Camp = new javax.swing.JPanel();
+        jLabelRegisterCamp = new javax.swing.JLabel();
+        jTextFieldGroupName = new javax.swing.JTextField();
+        jLabelCampName = new javax.swing.JLabel();
+        jButtonSaveCamp = new javax.swing.JButton();
+        jButtonInsertImage = new javax.swing.JButton();
+        jLabelPic_CampRegister = new javax.swing.JLabel();
+        jPanelCamp_Info = new javax.swing.JPanel();
+        jLabelCampInfo_CampName = new javax.swing.JLabel();
+        jLabelMemberList = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabelTotal_Points = new javax.swing.JLabel();
+        jTextFieldTotalPoints = new javax.swing.JTextField();
+        jLabelPic_CampInfo = new javax.swing.JLabel();
+        jButtonEditCamp = new javax.swing.JButton();
+        jPanelCamp_Join = new javax.swing.JPanel();
+        jButtonJoinCamp = new javax.swing.JButton();
+        jButtonRegisterCamp = new javax.swing.JButton();
+        jComboBoxCampHolder = new javax.swing.JComboBox();
+        jLabelBrowseCamps = new javax.swing.JLabel();
         jPanelMap = new javax.swing.JPanel();
         jLabePic_Map = new javax.swing.JLabel();
         jLabelMap = new javax.swing.JLabel();
@@ -75,6 +105,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jButtonYourCamp = new javax.swing.JButton();
         jButtonInfo = new javax.swing.JButton();
         jButtonQuiz = new javax.swing.JButton();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Roskilde Festival");
@@ -122,29 +154,344 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addComponent(jLabelPic_Orange, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabelCounter, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 78, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        jPanelCamp.setBackground(new java.awt.Color(255, 72, 12));
         jPanelCamp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanelCamp.setPreferredSize(new java.awt.Dimension(414, 290));
+        jPanelCamp.setPreferredSize(new java.awt.Dimension(502, 567));
 
-        jLabelCamp.setText("Camp");
+        jLabelCamp.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelCamp.setText("<html>Your Camp</html>");
+        jLabelCamp.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelCamp.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jLayeredInternal_Camp.setPreferredSize(new java.awt.Dimension(478, 453));
+
+        jPanelCamp_Register_User.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Register_User.setPreferredSize(new java.awt.Dimension(478, 453));
+
+        jLabelUserName.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelUserName.setText("Username");
+
+        jLabelPassword.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelPassword.setText("Password");
+
+        jButtonLoginUser.setText("Login");
+        jButtonLoginUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginUserActionPerformed(evt);
+            }
+        });
+
+        jButtonRegisterUser.setText("Register");
+
+        javax.swing.GroupLayout jPanelCamp_Register_UserLayout = new javax.swing.GroupLayout(jPanelCamp_Register_User);
+        jPanelCamp_Register_User.setLayout(jPanelCamp_Register_UserLayout);
+        jPanelCamp_Register_UserLayout.setHorizontalGroup(
+            jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_Register_UserLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelCamp_Register_UserLayout.createSequentialGroup()
+                        .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelPassword)
+                            .addComponent(jLabelUserName))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldUserName)
+                            .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelCamp_Register_UserLayout.createSequentialGroup()
+                        .addComponent(jButtonLoginUser, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButtonRegisterUser)))
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
+        jPanelCamp_Register_UserLayout.setVerticalGroup(
+            jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_Register_UserLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelUserName)
+                    .addComponent(jTextFieldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPassword)
+                    .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanelCamp_Register_UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonLoginUser)
+                    .addComponent(jButtonRegisterUser))
+                .addContainerGap(177, Short.MAX_VALUE))
+        );
+
+        jPanelCamp_Register_Camp.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Register_Camp.setPreferredSize(new java.awt.Dimension(478, 453));
+
+        jLabelRegisterCamp.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelRegisterCamp.setText("Register Your Camp");
+
+        jLabelCampName.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabelCampName.setText("Camp Name");
+
+        jButtonSaveCamp.setText("Save Camp");
+
+        jButtonInsertImage.setText("Insert Image");
+
+        jLabelPic_CampRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Insert Image.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelCamp_Register_CampLayout = new javax.swing.GroupLayout(jPanelCamp_Register_Camp);
+        jPanelCamp_Register_Camp.setLayout(jPanelCamp_Register_CampLayout);
+        jPanelCamp_Register_CampLayout.setHorizontalGroup(
+            jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                        .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelRegisterCamp)
+                            .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                                .addComponent(jLabelCampName)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldGroupName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(38, Short.MAX_VALUE))
+                    .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                        .addComponent(jLabelPic_CampRegister)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonInsertImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSaveCamp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39))))
+        );
+        jPanelCamp_Register_CampLayout.setVerticalGroup(
+            jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabelRegisterCamp)
+                .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelPic_CampRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(jPanelCamp_Register_CampLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jButtonInsertImage, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSaveCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)))
+                .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCampName)
+                    .addComponent(jTextFieldGroupName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelCamp_Info.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Info.setPreferredSize(new java.awt.Dimension(478, 453));
+
+        jLabelCampInfo_CampName.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelCampInfo_CampName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelCampInfo_CampName.setText("CAMP [CampName]");
+        jLabelCampInfo_CampName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabelMemberList.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelMemberList.setText("Members");
+
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("1.[Member] P: XX\n2.[Member] P: XX\n3.[Member] P: XX\n4.[Member] P: XX\n5.[Member] P: XX\n6.[Member] P: XX\n7.[Member] P: XX\n8.[Member] P: XX");
+        jScrollPane4.setViewportView(jTextArea1);
+
+        jLabelTotal_Points.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelTotal_Points.setText("Total Points:");
+
+        jTextFieldTotalPoints.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        jTextFieldTotalPoints.setForeground(new java.awt.Color(255, 72, 12));
+        jTextFieldTotalPoints.setText("50 Points");
+        jTextFieldTotalPoints.setDisabledTextColor(new java.awt.Color(255, 51, 0));
+        jTextFieldTotalPoints.setFocusable(false);
+
+        jLabelPic_CampInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/CampRetarted.png"))); // NOI18N
+
+        jButtonEditCamp.setText("Edit Camp");
+
+        javax.swing.GroupLayout jPanelCamp_InfoLayout = new javax.swing.GroupLayout(jPanelCamp_Info);
+        jPanelCamp_Info.setLayout(jPanelCamp_InfoLayout);
+        jPanelCamp_InfoLayout.setHorizontalGroup(
+            jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCamp_InfoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelCampInfo_CampName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                        .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldTotalPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jButtonEditCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))
+                    .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabelTotal_Points)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelMemberList)
+                        .addGap(64, 64, 64)))
+                .addContainerGap())
+            .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabelPic_CampInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelCamp_InfoLayout.setVerticalGroup(
+            jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCampInfo_CampName, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelPic_CampInfo)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTotal_Points)
+                    .addComponent(jLabelMemberList))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
+                        .addComponent(jTextFieldTotalPoints, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonEditCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+
+        jPanelCamp_Join.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Join.setPreferredSize(new java.awt.Dimension(478, 453));
+
+        jButtonJoinCamp.setText("Join Camp");
+        jButtonJoinCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJoinCampActionPerformed(evt);
+            }
+        });
+
+        jButtonRegisterCamp.setText("Register Camp");
+        jButtonRegisterCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegisterCampActionPerformed(evt);
+            }
+        });
+
+        jComboBoxCampHolder.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabelBrowseCamps.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelBrowseCamps.setText("Browse Camps!");
+
+        javax.swing.GroupLayout jPanelCamp_JoinLayout = new javax.swing.GroupLayout(jPanelCamp_Join);
+        jPanelCamp_Join.setLayout(jPanelCamp_JoinLayout);
+        jPanelCamp_JoinLayout.setHorizontalGroup(
+            jPanelCamp_JoinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCamp_JoinLayout.createSequentialGroup()
+                .addGroup(jPanelCamp_JoinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelCamp_JoinLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegisterCamp))
+                    .addGroup(jPanelCamp_JoinLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanelCamp_JoinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelBrowseCamps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanelCamp_JoinLayout.createSequentialGroup()
+                                .addComponent(jComboBoxCampHolder, 0, 154, Short.MAX_VALUE)
+                                .addGap(141, 141, 141)
+                                .addComponent(jButtonJoinCamp)))))
+                .addGap(75, 75, 75))
+        );
+        jPanelCamp_JoinLayout.setVerticalGroup(
+            jPanelCamp_JoinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCamp_JoinLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jLabelBrowseCamps, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCamp_JoinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonJoinCamp)
+                    .addComponent(jComboBoxCampHolder, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addComponent(jButtonRegisterCamp)
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jLayeredInternal_CampLayout = new javax.swing.GroupLayout(jLayeredInternal_Camp);
+        jLayeredInternal_Camp.setLayout(jLayeredInternal_CampLayout);
+        jLayeredInternal_CampLayout.setHorizontalGroup(
+            jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredInternal_CampLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelCamp_Register_User, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Register_Camp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Join, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jLayeredInternal_CampLayout.setVerticalGroup(
+            jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                .addComponent(jPanelCamp_Register_User, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Register_Camp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredInternal_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredInternal_CampLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelCamp_Join, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jLayeredInternal_Camp.setLayer(jPanelCamp_Register_User, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredInternal_Camp.setLayer(jPanelCamp_Register_Camp, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredInternal_Camp.setLayer(jPanelCamp_Info, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredInternal_Camp.setLayer(jPanelCamp_Join, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelCampLayout = new javax.swing.GroupLayout(jPanelCamp);
         jPanelCamp.setLayout(jPanelCampLayout);
         jPanelCampLayout.setHorizontalGroup(
             jPanelCampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCampLayout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jLabelCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addGroup(jPanelCampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCampLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLayeredInternal_Camp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelCampLayout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(jLabelCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelCampLayout.setVerticalGroup(
             jPanelCampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCampLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabelCamp)
-                .addContainerGap(531, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabelCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLayeredInternal_Camp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelMap.setBackground(new java.awt.Color(255, 72, 12));
@@ -167,7 +514,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jPanelMapLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelMapLayout.setVerticalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,7 +678,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addGroup(jPanelInfoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelInfoLayout.setVerticalGroup(
             jPanelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,13 +703,13 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -370,7 +717,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
+                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -477,6 +824,10 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz.setVisible(false);
         jPanelInfo.setVisible(false);
         jPanelCamp.setVisible(true);
+        jPanelCamp_Register_User.setVisible(true);
+        jPanelCamp_Join.setVisible(false);
+        jPanelCamp_Register_Camp.setVisible(false);
+        jPanelCamp_Info.setVisible(false);
     }//GEN-LAST:event_jButtonYourCampActionPerformed
 
     private void jButtonQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizActionPerformed
@@ -504,7 +855,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelInfo_GeneralInfo.setVisible(true);
         jPanelInfo_Schedule.setVisible(false);
         jPanelInfo_Artist.setVisible(false);
-        
+       
     }//GEN-LAST:event_jButtonInfo_GeneralInfoActionPerformed
 
     private void jButtonInfo_ArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfo_ArtistActionPerformed
@@ -518,6 +869,22 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelInfo_Artist.setVisible(false);
         jPanelInfo_Schedule.setVisible(true);
     }//GEN-LAST:event_jButtonInfo_ScheduleActionPerformed
+
+    private void jButtonLoginUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginUserActionPerformed
+        jPanelCamp_Register_User.setVisible(false);
+        jPanelCamp_Join.setVisible(true); 
+    }//GEN-LAST:event_jButtonLoginUserActionPerformed
+
+    private void jButtonJoinCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJoinCampActionPerformed
+       jPanelCamp_Join.setVisible(false);
+       jPanelCamp_Info.setVisible(true);
+       
+    }//GEN-LAST:event_jButtonJoinCampActionPerformed
+
+    private void jButtonRegisterCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterCampActionPerformed
+        jPanelCamp_Join.setVisible(false);
+        jPanelCamp_Register_Camp.setVisible(true);
+    }//GEN-LAST:event_jButtonRegisterCampActionPerformed
 
     /**
      * @param args the command line arguments
@@ -555,26 +922,50 @@ public class Queing_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonEditCamp;
     private javax.swing.JButton jButtonHome;
     private javax.swing.JButton jButtonInfo;
     private javax.swing.JButton jButtonInfo_Artist;
     private javax.swing.JButton jButtonInfo_GeneralInfo;
     private javax.swing.JButton jButtonInfo_Schedule;
+    private javax.swing.JButton jButtonInsertImage;
+    private javax.swing.JButton jButtonJoinCamp;
+    private javax.swing.JButton jButtonLoginUser;
     private javax.swing.JButton jButtonMap;
     private javax.swing.JButton jButtonQuiz;
+    private javax.swing.JButton jButtonRegisterCamp;
+    private javax.swing.JButton jButtonRegisterUser;
+    private javax.swing.JButton jButtonSaveCamp;
     private javax.swing.JButton jButtonYourCamp;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBoxCampHolder;
     private javax.swing.JLabel jLabePic_Map;
+    private javax.swing.JLabel jLabelBrowseCamps;
     private javax.swing.JLabel jLabelCamp;
+    private javax.swing.JLabel jLabelCampInfo_CampName;
+    private javax.swing.JLabel jLabelCampName;
     private javax.swing.JLabel jLabelCounter;
     private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelInfo;
     private javax.swing.JLabel jLabelMap;
+    private javax.swing.JLabel jLabelMemberList;
+    private javax.swing.JLabel jLabelPassword;
+    private javax.swing.JLabel jLabelPic_CampInfo;
+    private javax.swing.JLabel jLabelPic_CampRegister;
     private javax.swing.JLabel jLabelPic_Orange;
     private javax.swing.JLabel jLabelQuiz;
+    private javax.swing.JLabel jLabelRegisterCamp;
+    private javax.swing.JLabel jLabelTotal_Points;
+    private javax.swing.JLabel jLabelUserName;
+    private javax.swing.JLayeredPane jLayeredInternal_Camp;
     private javax.swing.JLayeredPane jLayeredPane;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelCamp;
+    private javax.swing.JPanel jPanelCamp_Info;
+    private javax.swing.JPanel jPanelCamp_Join;
+    private javax.swing.JPanel jPanelCamp_Register_Camp;
+    private javax.swing.JPanel jPanelCamp_Register_User;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelInfo;
     private javax.swing.JPanel jPanelInfo_Artist;
@@ -582,12 +973,18 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelInfo_Schedule;
     private javax.swing.JPanel jPanelMap;
     private javax.swing.JPanel jPanelQuiz;
+    private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextAreaArtist;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaSchedule;
+    private javax.swing.JTextField jTextFieldGroupName;
+    private javax.swing.JTextField jTextFieldTotalPoints;
+    private javax.swing.JTextField jTextFieldUserName;
     // End of variables declaration//GEN-END:variables
 }
