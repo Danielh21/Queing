@@ -58,7 +58,7 @@ public class Quiz {
         }
     }
 
-    public void theGame(Queing_GUI a) {
+    public void updateQs(Queing_GUI a) {
         if (numOfQsAns < 5) {
             Collections.shuffle(quiz);
             curQ = quiz.get(0);
@@ -72,7 +72,7 @@ public class Quiz {
             isDone();
         }
     }
-
+    
     public boolean isCorrect(int x) {
         boolean isCorrect = false;
         if (curQ[x].equalsIgnoreCase(curQ[5])) {
@@ -86,7 +86,7 @@ public class Quiz {
         try {
             TimeUnit.MILLISECONDS.sleep(x);
         } catch (InterruptedException ex) {
-
+            
         }
     }
     
@@ -94,38 +94,43 @@ public class Quiz {
         q.getjLabelCurQScore().setText("Score: " + score);
     }
     
-    public void buttonEvent(int i, Queing_GUI q) {
+    public void buttonEvent(int i, Queing_GUI q, JButton jB) {
         if (isCorrect(i) && isDone()) {
-            q.getjPanelGame().setBackground(Color.green);
+            jB.setBackground(Color.green);
             q.getjPanelGame().update(q.getjPanelGame().getGraphics());
             sleep(600);
-            q.getjPanelGame().setBackground(Color.white);
+            jB.setBackground(new JButton().getBackground());
             q.getjPanelGame().setVisible(false);
             q.getjPanelScore().setVisible(true);
             score += 10;
             score(q);
             q.setRunning(false);
         } else if (isCorrect(i)) {
-            q.getjPanelGame().setBackground(Color.green);
+            jB.setBackground(Color.green);
             q.getjPanelGame().update(q.getjPanelGame().getGraphics());
+            
+            //q.getjPanelGame().setBackground(Color.green);
+           // q.getjPanelGame().update(q.getjPanelGame().getGraphics());
             sleep(600);
-            q.getjPanelGame().setBackground(Color.white);
+            jB.setBackground(new JButton().getBackground());
+           // q.getjPanelGame().setBackground(Color.white);
             score += 10;
-            theGame(q);
+            updateQs(q);
+            
         } else if (!isCorrect(i) && isDone()) {
-            q.getjPanelGame().setBackground(Color.red);
+            jB.setBackground(Color.red);
             q.getjPanelGame().update(q.getjPanelGame().getGraphics());
             sleep(600);
-            q.getjPanelGame().setBackground(Color.white);
+            jB.setBackground(new JButton().getBackground());
             q.getjPanelGame().setVisible(false);
             q.getjPanelScore().setVisible(true);
             score(q);
         } else {
-            q.getjPanelGame().setBackground(Color.red);
+            jB.setBackground(Color.red);
             q.getjPanelGame().update(q.getjPanelGame().getGraphics());
             sleep(600);
-            q.getjPanelGame().setBackground(Color.white);
-            theGame(q);
+            jB.setBackground(new JButton().getBackground());
+            updateQs(q);
         }
         updateScore(q);
     }

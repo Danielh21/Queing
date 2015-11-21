@@ -965,7 +965,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelInfo.setVisible(false);
             jPanelQuiz.setVisible(true);
             if (!hasRun) {
-                quiz.theGame(this);
+                quiz.updateQs(this);
                 hasRun = true;
                 running = true;
             }
@@ -1022,19 +1022,19 @@ public class Queing_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegisterCampActionPerformed
 
     private void jButtonA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA1ActionPerformed
-        quiz.buttonEvent(1, this);
+        quiz.buttonEvent(1, this, this.jButtonA1);
     }//GEN-LAST:event_jButtonA1ActionPerformed
 
     private void jButtonA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA2ActionPerformed
-        quiz.buttonEvent(2, this);
+        quiz.buttonEvent(2, this, this.jButtonA2);
     }//GEN-LAST:event_jButtonA2ActionPerformed
 
     private void jButtonA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA3ActionPerformed
-        quiz.buttonEvent(3, this);
+        quiz.buttonEvent(3, this, this.jButtonA3);
     }//GEN-LAST:event_jButtonA3ActionPerformed
 
     private void jButtonA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA4ActionPerformed
-        quiz.buttonEvent(4, this);
+        quiz.buttonEvent(4, this, this.jButtonA4);
     }//GEN-LAST:event_jButtonA4ActionPerformed
 
     /**
