@@ -10,7 +10,7 @@ package queing;
  * @author Daniel
  */
 public class Queing_GUI extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Queing_GUI
      */
@@ -22,12 +22,20 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz.setVisible(false);
         jPanelInfo.setVisible(false);
         
+        
         /* 
         Lige nu har jeg sat borders til alle panels, for at se hvor store de er, 
         og så det passer med at de er lige store.
         Hvis vi skal ændre i de enkelte panels, kan det nu enkelt gøres ved at 
         bruge designeren, ved at klikke på de enkelte panels i navigatoren.
-        */        
+        */    
+        
+        /*
+        Jeg vil prøve at holde så lidt logik her som muligt men det kan være svært
+        Der skal næsten ingen logik være i knapperne, andet end hvad der skal vises
+        men der bliver nød til at være lidt logik, i forhold til at ændre teksten
+        i felterne.
+        */
  
         
     }
@@ -108,7 +116,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextAreaQuiz_Done_Thanks = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelQuizDonePoints = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanelQuiz_TheQuiz = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -120,6 +128,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jLabelQuiz_Counter = new javax.swing.JLabel();
         jLabelQuiz_Pic_CounterCircle = new javax.swing.JLabel();
+        jLabelQuizTextTotalPoints = new javax.swing.JLabel();
+        jLabelQuiz_TotalPoints = new javax.swing.JLabel();
         jPanelQuiz_NotLoggedIn = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -772,9 +782,9 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("200 Points");
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel2.setText("50 Points");
+        jLabelQuizDonePoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuizDonePoints.setForeground(new java.awt.Color(51, 0, 255));
+        jLabelQuizDonePoints.setText("50 Points");
 
         jLabel3.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -792,7 +802,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelQuizDonePoints, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanelQuiz_DoneLayout.setVerticalGroup(
@@ -801,7 +811,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelQuizDonePoints, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -821,7 +831,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuizQuestion.setColumns(20);
         jTextAreaQuizQuestion.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jTextAreaQuizQuestion.setRows(5);
-        jTextAreaQuizQuestion.setText("When did the first Roskilde \ntake place?\n");
+        jTextAreaQuizQuestion.setText("Question Goes Here");
         jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
 
@@ -833,10 +843,25 @@ public class Queing_GUI extends javax.swing.JFrame {
         });
 
         jButtonQuiz_Answer2.setText("Answer2");
+        jButtonQuiz_Answer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuiz_Answer2ActionPerformed(evt);
+            }
+        });
 
         jButtonQuiz_Answer3.setText("Answer3");
+        jButtonQuiz_Answer3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuiz_Answer3ActionPerformed(evt);
+            }
+        });
 
         jButtonQuiz_Answer4.setText("Answer4");
+        jButtonQuiz_Answer4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuiz_Answer4ActionPerformed(evt);
+            }
+        });
 
         jLabelQuiz_Counter.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabelQuiz_Counter.setForeground(new java.awt.Color(255, 0, 0));
@@ -873,6 +898,13 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLayeredPane2.setLayer(jLabelQuiz_Counter, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jLabelQuiz_Pic_CounterCircle, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jLabelQuizTextTotalPoints.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelQuizTextTotalPoints.setText("Total Points:");
+
+        jLabelQuiz_TotalPoints.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelQuiz_TotalPoints.setForeground(new java.awt.Color(0, 51, 255));
+        jLabelQuiz_TotalPoints.setText("0");
+
         javax.swing.GroupLayout jPanelQuiz_TheQuizLayout = new javax.swing.GroupLayout(jPanelQuiz_TheQuiz);
         jPanelQuiz_TheQuiz.setLayout(jPanelQuiz_TheQuizLayout);
         jPanelQuiz_TheQuizLayout.setHorizontalGroup(
@@ -895,7 +927,13 @@ public class Queing_GUI extends javax.swing.JFrame {
                                 .addComponent(jButtonQuiz_Answer2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabelQuiz_TotalPoints))
+                            .addComponent(jLabelQuizTextTotalPoints))))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanelQuiz_TheQuizLayout.setVerticalGroup(
@@ -911,8 +949,15 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonQuiz_Answer3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonQuiz_Answer4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabelQuizTextTotalPoints)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelQuiz_TotalPoints)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1103,7 +1148,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addGroup(jPanelInfoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         jPanelInfoLayout.setVerticalGroup(
             jPanelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1117,7 +1162,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addComponent(jButtonInfo_Artist))
                 .addGap(18, 18, 18)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jLayeredPaneLayout = new javax.swing.GroupLayout(jLayeredPane);
@@ -1313,6 +1358,11 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonEnterQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnterQuizActionPerformed
         jPanelQuiz_Intro.setVisible(false);
+        q.setAnswers(jTextAreaQuizQuestion,
+                     jButtonQuiz_Answer1, 
+                     jButtonQuiz_Answer2,
+                     jButtonQuiz_Answer3,
+                     jButtonQuiz_Answer4);
         jPanelQuiz_TheQuiz.setVisible(true);
         
     }//GEN-LAST:event_jButtonEnterQuizActionPerformed
@@ -1320,12 +1370,75 @@ public class Queing_GUI extends javax.swing.JFrame {
     private void jButtonQuizRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizRateActionPerformed
         jPanelQuiz_Evaluation.setVisible(false);
         jPanelQuiz_Done.setVisible(true);
+        jLabelQuizDonePoints.setText(q.getPointsAsString());
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
 
     private void jButtonQuiz_Answer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer1ActionPerformed
-        jPanelQuiz_TheQuiz.setVisible(false);
-        jPanelQuiz_Evaluation.setVisible(true);
+       
+        q.checkAnswer(jButtonQuiz_Answer1.getText());
+        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+       boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                     jButtonQuiz_Answer1, 
+                     jButtonQuiz_Answer2,
+                     jButtonQuiz_Answer3,
+                     jButtonQuiz_Answer4);
+       
+       if(done){
+           jPanelQuiz_TheQuiz.setVisible(false);
+           jPanelQuiz_Evaluation.setVisible(true);
+           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+       }
+        
     }//GEN-LAST:event_jButtonQuiz_Answer1ActionPerformed
+
+    private void jButtonQuiz_Answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer2ActionPerformed
+       
+        q.checkAnswer(jButtonQuiz_Answer2.getText());
+        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+        boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                     jButtonQuiz_Answer1, 
+                     jButtonQuiz_Answer2,
+                     jButtonQuiz_Answer3,
+                     jButtonQuiz_Answer4);
+       
+       if(done){
+           jPanelQuiz_TheQuiz.setVisible(false);
+           jPanelQuiz_Evaluation.setVisible(true);
+           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+       }
+    }//GEN-LAST:event_jButtonQuiz_Answer2ActionPerformed
+
+    private void jButtonQuiz_Answer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer3ActionPerformed
+        q.checkAnswer(jButtonQuiz_Answer3.getText());
+        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+        boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                     jButtonQuiz_Answer1, 
+                     jButtonQuiz_Answer2,
+                     jButtonQuiz_Answer3,
+                     jButtonQuiz_Answer4);
+       
+       if(done){
+           jPanelQuiz_TheQuiz.setVisible(false);
+           jPanelQuiz_Evaluation.setVisible(true);
+           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+       }
+    }//GEN-LAST:event_jButtonQuiz_Answer3ActionPerformed
+
+    private void jButtonQuiz_Answer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer4ActionPerformed
+            q.checkAnswer(jButtonQuiz_Answer4.getText());
+            jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+        boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                     jButtonQuiz_Answer1, 
+                     jButtonQuiz_Answer2,
+                     jButtonQuiz_Answer3,
+                     jButtonQuiz_Answer4);
+       
+       if(done){
+           jPanelQuiz_TheQuiz.setVisible(false);
+           jPanelQuiz_Evaluation.setVisible(true);
+           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+       }
+    }//GEN-LAST:event_jButtonQuiz_Answer4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1362,6 +1475,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         });
     }
 
+    //The Logic:
+    Quiz  q = new Quiz();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEditCamp;
     private javax.swing.JButton jButtonEnterQuiz;
@@ -1388,7 +1503,6 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxCampHolder;
     private javax.swing.JLabel jLabePic_Map;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelBrowseCamps;
     private javax.swing.JLabel jLabelCamp;
@@ -1404,6 +1518,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPic_CampRegister;
     private javax.swing.JLabel jLabelPic_Orange;
     private javax.swing.JLabel jLabelQuiz;
+    private javax.swing.JLabel jLabelQuizDonePoints;
     private javax.swing.JLabel jLabelQuizFinal;
     private javax.swing.JLabel jLabelQuizPointsQuiz;
     private javax.swing.JLabel jLabelQuizRateNumber1;
@@ -1412,9 +1527,11 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelQuizRateNumber4;
     private javax.swing.JLabel jLabelQuizRateNumber5;
     private javax.swing.JLabel jLabelQuizTextPoints;
+    private javax.swing.JLabel jLabelQuizTextTotalPoints;
     private javax.swing.JLabel jLabelQuizTextYouScored;
     private javax.swing.JLabel jLabelQuiz_Counter;
     private javax.swing.JLabel jLabelQuiz_Pic_CounterCircle;
+    private javax.swing.JLabel jLabelQuiz_TotalPoints;
     private javax.swing.JLabel jLabelRateQuiz;
     private javax.swing.JLabel jLabelRegisterCamp;
     private javax.swing.JLabel jLabelTotal_Points;

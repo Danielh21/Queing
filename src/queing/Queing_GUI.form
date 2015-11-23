@@ -1187,7 +1187,7 @@
                                   <Component id="jLabel1" min="-2" pref="252" max="-2" attributes="0"/>
                                   <Component id="jScrollPane6" min="-2" pref="410" max="-2" attributes="0"/>
                                   <Component id="jScrollPane7" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" pref="252" max="-2" attributes="0"/>
+                                  <Component id="jLabelQuizDonePoints" alignment="0" min="-2" pref="252" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="36" max="32767" attributes="0"/>
                           </Group>
@@ -1199,7 +1199,7 @@
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jScrollPane7" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="jLabelQuizDonePoints" min="-2" pref="39" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jScrollPane6" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1293,7 +1293,7 @@
                         <Property name="text" type="java.lang.String" value="200 Points"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel2">
+                    <Component class="javax.swing.JLabel" name="jLabelQuizDonePoints">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="24" style="3"/>
@@ -1355,6 +1355,14 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                       <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                              <Component id="jLabelQuiz_TotalPoints" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabelQuizTextTotalPoints" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
@@ -1376,8 +1384,18 @@
                                   <Component id="jButtonQuiz_Answer3" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
                                   <Component id="jButtonQuiz_Answer4" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="jLabelQuizTextTotalPoints" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelQuiz_TotalPoints" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1402,7 +1420,7 @@
                               <Font name="Verdana" size="24" style="3"/>
                             </Property>
                             <Property name="rows" type="int" value="5"/>
-                            <Property name="text" type="java.lang.String" value="When did the first Roskilde &#xa;take place?&#xa;"/>
+                            <Property name="text" type="java.lang.String" value="Question Goes Here"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                                 <BevelBorder/>
@@ -1424,16 +1442,25 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Answer2"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonQuiz_Answer2ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonQuiz_Answer3">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Answer3"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonQuiz_Answer3ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonQuiz_Answer4">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Answer4"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonQuiz_Answer4ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JLayeredPane" name="jLayeredPane2">
 
@@ -1492,6 +1519,25 @@
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="jLabelQuizTextTotalPoints">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Verdana" size="18" style="3"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Total Points:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelQuiz_TotalPoints">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Verdana" size="18" style="3"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="33" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="0"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanelQuiz_NotLoggedIn">
@@ -1600,7 +1646,7 @@
                               <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="152" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1617,7 +1663,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
