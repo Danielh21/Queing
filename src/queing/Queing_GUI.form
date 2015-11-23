@@ -73,19 +73,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Component id="jPanelMap" alignment="0" pref="502" max="32767" attributes="0"/>
+                  <Component id="jPanelMap" alignment="0" pref="504" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                  <Component id="jPanelCamp" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanelCamp" alignment="0" pref="504" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                  <Component id="jPanelHome" alignment="0" pref="502" max="32767" attributes="0"/>
+                  <Component id="jPanelHome" alignment="0" pref="504" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-                  <Component id="jPanelQuiz" alignment="0" pref="502" max="32767" attributes="0"/>
+                  <Component id="jPanelQuiz" alignment="0" pref="504" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-                  <Component id="jPanelInfo" alignment="0" pref="502" max="32767" attributes="0"/>
+                  <Component id="jPanelInfo" alignment="0" pref="504" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

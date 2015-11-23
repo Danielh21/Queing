@@ -5,15 +5,10 @@
  */
 package queing;
 
-/**
- *
- * @author Daniel
- */
 public class Queing_GUI extends javax.swing.JFrame {
-    
-    /**
-     * Creates new form Queing_GUI
-     */
+
+    boolean running = false;
+
     public Queing_GUI() {
         initComponents();
         jPanelHome.setVisible(true);
@@ -21,24 +16,19 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelCamp.setVisible(false);
         jPanelQuiz.setVisible(false);
         jPanelInfo.setVisible(false);
-        
-        
-        
+
         /* 
-        Lige nu har jeg sat borders til alle panels, for at se hvor store de er, 
-        og så det passer med at de er lige store.
-        Hvis vi skal ændre i de enkelte panels, kan det nu enkelt gøres ved at 
-        bruge designeren, ved at klikke på de enkelte panels i navigatoren.
-        */    
-        
+         Lige nu har jeg sat borders til alle panels, for at se hvor store de er, 
+         og så det passer med at de er lige store.
+         Hvis vi skal ændre i de enkelte panels, kan det nu enkelt gøres ved at 
+         bruge designeren, ved at klikke på de enkelte panels i navigatoren.
+         */
         /*
-        Jeg vil prøve at holde så lidt logik her som muligt men det kan være svært
-        Der skal næsten ingen logik være i knapperne, andet end hvad der skal vises
-        men der bliver nød til at være lidt logik, i forhold til at ændre teksten
-        i felterne.
-        */
- 
-        
+         Jeg vil prøve at holde så lidt logik her som muligt men det kan være svært
+         Der skal næsten ingen logik være i knapperne, andet end hvad der skal vises
+         men der bliver nød til at være lidt logik, i forhold til at ændre teksten
+         i felterne.
+         */
     }
 
     /**
@@ -1273,60 +1263,70 @@ public class Queing_GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void jButtonMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMapActionPerformed
-        jPanelHome.setVisible(false);
-        jPanelCamp.setVisible(false);
-        jPanelQuiz.setVisible(false);
-        jPanelInfo.setVisible(false);
-        jPanelMap.setVisible(true);
+        if (!running) {
+            jPanelHome.setVisible(false);
+            jPanelCamp.setVisible(false);
+            jPanelQuiz.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelMap.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonMapActionPerformed
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        jPanelMap.setVisible(false);
-        jPanelCamp.setVisible(false);
-        jPanelQuiz.setVisible(false);
-        jPanelInfo.setVisible(false);
-        jPanelHome.setVisible(true);
+        if (!running) {
+            jPanelMap.setVisible(false);
+            jPanelCamp.setVisible(false);
+            jPanelQuiz.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelHome.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonYourCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonYourCampActionPerformed
-        jPanelMap.setVisible(false);
-        jPanelHome.setVisible(false);
-        jPanelQuiz.setVisible(false);
-        jPanelInfo.setVisible(false);
-        jPanelCamp.setVisible(true);
-        jPanelCamp_Register_User.setVisible(true);
-        jPanelCamp_Join.setVisible(false);
-        jPanelCamp_Register_Camp.setVisible(false);
-        jPanelCamp_Info.setVisible(false);
+        if (!running) {
+            jPanelMap.setVisible(false);
+            jPanelHome.setVisible(false);
+            jPanelQuiz.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelCamp.setVisible(true);
+            jPanelCamp_Register_User.setVisible(true);
+            jPanelCamp_Join.setVisible(false);
+            jPanelCamp_Register_Camp.setVisible(false);
+            jPanelCamp_Info.setVisible(false);
+        }
     }//GEN-LAST:event_jButtonYourCampActionPerformed
 
     private void jButtonQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizActionPerformed
-        jPanelMap.setVisible(false);
-        jPanelHome.setVisible(false);
-        jPanelCamp.setVisible(false);
-        jPanelInfo.setVisible(false);
-        jPanelQuiz.setVisible(true);
+        if (!running) {
+            jPanelMap.setVisible(false);
+            jPanelHome.setVisible(false);
+            jPanelCamp.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelQuiz.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonQuizActionPerformed
 
     private void jButtonInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfoActionPerformed
-        // TODO add your handling code here:
-        jPanelMap.setVisible(false);
-        jPanelHome.setVisible(false);
-        jPanelCamp.setVisible(false);
-        jPanelQuiz.setVisible(false);
-        jPanelInfo.setVisible(true);
-        jPanelInfo_GeneralInfo.setVisible(false);
-        jPanelInfo_Artist.setVisible(false);
-        jPanelInfo_Schedule.setVisible(false);
+        if (!running) {
+            jPanelMap.setVisible(false);
+            jPanelHome.setVisible(false);
+            jPanelCamp.setVisible(false);
+            jPanelQuiz.setVisible(false);
+            jPanelInfo.setVisible(true);
+            jPanelInfo_GeneralInfo.setVisible(false);
+            jPanelInfo_Artist.setVisible(false);
+            jPanelInfo_Schedule.setVisible(false);
+        }
     }//GEN-LAST:event_jButtonInfoActionPerformed
 
     private void jButtonInfo_GeneralInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfo_GeneralInfoActionPerformed
-       
+
         jPanelInfo_GeneralInfo.setVisible(true);
         jPanelInfo_Schedule.setVisible(false);
         jPanelInfo_Artist.setVisible(false);
-       
+
     }//GEN-LAST:event_jButtonInfo_GeneralInfoActionPerformed
 
     private void jButtonInfo_ArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfo_ArtistActionPerformed
@@ -1343,13 +1343,13 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonLoginUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginUserActionPerformed
         jPanelCamp_Register_User.setVisible(false);
-        jPanelCamp_Join.setVisible(true); 
+        jPanelCamp_Join.setVisible(true);
     }//GEN-LAST:event_jButtonLoginUserActionPerformed
 
     private void jButtonJoinCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJoinCampActionPerformed
-       jPanelCamp_Join.setVisible(false);
-       jPanelCamp_Info.setVisible(true);
-       
+        jPanelCamp_Join.setVisible(false);
+        jPanelCamp_Info.setVisible(true);
+
     }//GEN-LAST:event_jButtonJoinCampActionPerformed
 
     private void jButtonRegisterCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterCampActionPerformed
@@ -1358,87 +1358,86 @@ public class Queing_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegisterCampActionPerformed
 
     private void jButtonEnterQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnterQuizActionPerformed
+        
         jPanelQuiz_Intro.setVisible(false);
         q.setAnswers(jTextAreaQuizQuestion,
-                     jButtonQuiz_Answer1, 
-                     jButtonQuiz_Answer2,
-                     jButtonQuiz_Answer3,
-                     jButtonQuiz_Answer4);
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
         jPanelQuiz_TheQuiz.setVisible(true);
-        
+        running = true;
     }//GEN-LAST:event_jButtonEnterQuizActionPerformed
 
     private void jButtonQuizRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizRateActionPerformed
         jPanelQuiz_Evaluation.setVisible(false);
         jPanelQuiz_Done.setVisible(true);
         jLabelQuizDonePoints.setText(q.getPointsAsString());
+        running = false;
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
 
     private void jButtonQuiz_Answer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer1ActionPerformed
-       
         q.checkAnswer(jButtonQuiz_Answer1.getText());
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
-       boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                     jButtonQuiz_Answer1, 
-                     jButtonQuiz_Answer2,
-                     jButtonQuiz_Answer3,
-                     jButtonQuiz_Answer4);
-       
-       if(done){
-           jPanelQuiz_TheQuiz.setVisible(false);
-           jPanelQuiz_Evaluation.setVisible(true);
-           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-       }
-        
+        boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
+
+        if (done) {
+            jPanelQuiz_TheQuiz.setVisible(false);
+            jPanelQuiz_Evaluation.setVisible(true);
+            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+        }
+
     }//GEN-LAST:event_jButtonQuiz_Answer1ActionPerformed
 
     private void jButtonQuiz_Answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer2ActionPerformed
-       
         q.checkAnswer(jButtonQuiz_Answer2.getText());
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                     jButtonQuiz_Answer1, 
-                     jButtonQuiz_Answer2,
-                     jButtonQuiz_Answer3,
-                     jButtonQuiz_Answer4);
-       
-       if(done){
-           jPanelQuiz_TheQuiz.setVisible(false);
-           jPanelQuiz_Evaluation.setVisible(true);
-           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-       }
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
+
+        if (done) {
+            jPanelQuiz_TheQuiz.setVisible(false);
+            jPanelQuiz_Evaluation.setVisible(true);
+            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+        }
     }//GEN-LAST:event_jButtonQuiz_Answer2ActionPerformed
 
     private void jButtonQuiz_Answer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer3ActionPerformed
         q.checkAnswer(jButtonQuiz_Answer3.getText());
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                     jButtonQuiz_Answer1, 
-                     jButtonQuiz_Answer2,
-                     jButtonQuiz_Answer3,
-                     jButtonQuiz_Answer4);
-       
-       if(done){
-           jPanelQuiz_TheQuiz.setVisible(false);
-           jPanelQuiz_Evaluation.setVisible(true);
-           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-       }
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
+        if (done) {
+            jPanelQuiz_TheQuiz.setVisible(false);
+            jPanelQuiz_Evaluation.setVisible(true);
+            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+        }
     }//GEN-LAST:event_jButtonQuiz_Answer3ActionPerformed
 
     private void jButtonQuiz_Answer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer4ActionPerformed
-            q.checkAnswer(jButtonQuiz_Answer4.getText());
-            jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+        q.checkAnswer(jButtonQuiz_Answer4.getText());
+        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                     jButtonQuiz_Answer1, 
-                     jButtonQuiz_Answer2,
-                     jButtonQuiz_Answer3,
-                     jButtonQuiz_Answer4);
-       
-       if(done){
-           jPanelQuiz_TheQuiz.setVisible(false);
-           jPanelQuiz_Evaluation.setVisible(true);
-           jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-       }
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
+
+        if (done) {
+            jPanelQuiz_TheQuiz.setVisible(false);
+            jPanelQuiz_Evaluation.setVisible(true);
+            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+        }
     }//GEN-LAST:event_jButtonQuiz_Answer4ActionPerformed
 
     /**
@@ -1467,17 +1466,17 @@ public class Queing_GUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Queing_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Queing_GUI().setVisible(true);
+
             }
         });
     }
 
     //The Logic:
-    Quiz  q = new Quiz();
+    Quiz q = new Quiz();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEditCamp;
     private javax.swing.JButton jButtonEnterQuiz;
