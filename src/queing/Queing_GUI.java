@@ -23,6 +23,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelInfo.setVisible(false);
         
         
+        
         /* 
         Lige nu har jeg sat borders til alle panels, for at se hvor store de er, 
         og så det passer med at de er lige store.
