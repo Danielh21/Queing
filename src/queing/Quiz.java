@@ -24,12 +24,12 @@ import javax.swing.SwingUtilities;
 public class Quiz {
 
     private ArrayList<String[]> quiz = new ArrayList<String[]>();
-    private String[] q1 = {"What is 2 + 3", "4", "1", "2", "5", "5"};
-    private String[] q2 = {"How many hours are there a day?", "20", "21", "15", "24", "24"};
-    private String[] q3 = {"Does this work?", "Sure", "Naah", "Srsly?", "Fuck NO!", "Sure"};
-    private String[] q4 = {"What comes after a?", "b", "c", "d", "e", "b"};
-    private String[] q5 = {"What is 2 + 5?", "3", "52", "7", "65", "7"};
-    private String[] q6 = {"10 + 3 = ?", "2", "3333", "4444", "13", "13"};
+    private String[] q1 = {"When was the first\nRoskilde held?", "1971", "1980", "1991", "2001", "1971"};
+    private String[] q2 = {"Which of these artist\nare preformning?", "Madonna", "Elvis", "Micheal Jackson", "Bent", "Micheal Jackson(hologram)"};
+    private String[] q3 = {"How many stages does\nRoskilde Festival have?", "4", "8", "10", "12", "8"};
+    private String[] q4 = {"How many different exits\ndoes Roskilde Festival have?", "1", "3", "5", "2", "5"};
+    private String[] q5 = {"Does Roskilde donate\ntheir profit?", "Yes", "No", "Maybe", "Call me Maybe", "Yes"};
+    private String[] q6 = {"How many attendees does\nRoskilde Festival have", "2", "3333", "80.000", "1.000.000", "80.000"};
     private boolean running = true;
     private int numOfQsAns = 0;
     private String answer;

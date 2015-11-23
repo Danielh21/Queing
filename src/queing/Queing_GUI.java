@@ -106,9 +106,11 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuiz_Done_TeamTotalScore = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextAreaQuiz_Done_Thanks = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelQuiz_Done_TeamPoints = new javax.swing.JLabel();
         jLabelQuizDonePoints = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabelQuizDonePoints1 = new javax.swing.JLabel();
+        jLabelQuiz_Done_TeamPoints1 = new javax.swing.JLabel();
         jPanelQuiz_TheQuiz = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextAreaQuizQuestion = new javax.swing.JTextArea();
@@ -631,6 +633,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelQuizFinal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelQuizPointsQuiz.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizPointsQuiz.setForeground(new java.awt.Color(51, 0, 255));
         jLabelQuizPointsQuiz.setText("50");
 
         jLabelQuizTextPoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
@@ -769,18 +772,26 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuiz_Done_Thanks.setBorder(null);
         jScrollPane7.setViewportView(jTextAreaQuiz_Done_Thanks);
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("200 Points");
+        jLabelQuiz_Done_TeamPoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuiz_Done_TeamPoints.setForeground(new java.awt.Color(0, 0, 255));
+        jLabelQuiz_Done_TeamPoints.setText("200");
 
         jLabelQuizDonePoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabelQuizDonePoints.setForeground(new java.awt.Color(51, 0, 255));
-        jLabelQuizDonePoints.setText("50 Points");
+        jLabelQuizDonePoints.setText("50");
 
         jLabel3.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("<html> Please invite more to your camp to improve your score </html>");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabelQuizDonePoints1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuizDonePoints1.setForeground(new java.awt.Color(51, 0, 255));
+        jLabelQuizDonePoints1.setText("Points");
+
+        jLabelQuiz_Done_TeamPoints1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuiz_Done_TeamPoints1.setForeground(new java.awt.Color(0, 0, 255));
+        jLabelQuiz_Done_TeamPoints1.setText("Points");
 
         javax.swing.GroupLayout jPanelQuiz_DoneLayout = new javax.swing.GroupLayout(jPanelQuiz_Done);
         jPanelQuiz_Done.setLayout(jPanelQuiz_DoneLayout);
@@ -790,10 +801,16 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelQuizDonePoints, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
+                        .addComponent(jLabelQuizDonePoints)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelQuizDonePoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
+                        .addComponent(jLabelQuiz_Done_TeamPoints)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelQuiz_Done_TeamPoints1)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanelQuiz_DoneLayout.setVerticalGroup(
@@ -802,11 +819,15 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelQuizDonePoints, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelQuizDonePoints, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelQuizDonePoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelQuiz_Done_TeamPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelQuiz_Done_TeamPoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(96, Short.MAX_VALUE))
@@ -824,6 +845,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuizQuestion.setRows(5);
         jTextAreaQuizQuestion.setText("Question Goes Here");
         jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextAreaQuizQuestion.setFocusable(false);
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
 
         jButtonQuiz_Answer1.setText("Answer1");
@@ -1162,15 +1184,15 @@ public class Queing_GUI extends javax.swing.JFrame {
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1502,7 +1524,6 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBoxCampHolder;
     private javax.swing.JLabel jLabePic_Map;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelBrowseCamps;
     private javax.swing.JLabel jLabelCamp;
@@ -1519,6 +1540,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPic_Orange;
     private javax.swing.JLabel jLabelQuiz;
     private javax.swing.JLabel jLabelQuizDonePoints;
+    private javax.swing.JLabel jLabelQuizDonePoints1;
     private javax.swing.JLabel jLabelQuizFinal;
     private javax.swing.JLabel jLabelQuizPointsQuiz;
     private javax.swing.JLabel jLabelQuizRateNumber1;
@@ -1530,6 +1552,8 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelQuizTextTotalPoints;
     private javax.swing.JLabel jLabelQuizTextYouScored;
     private javax.swing.JLabel jLabelQuiz_Counter;
+    private javax.swing.JLabel jLabelQuiz_Done_TeamPoints;
+    private javax.swing.JLabel jLabelQuiz_Done_TeamPoints1;
     private javax.swing.JLabel jLabelQuiz_Pic_CounterCircle;
     private javax.swing.JLabel jLabelQuiz_TotalPoints;
     private javax.swing.JLabel jLabelRateQuiz;

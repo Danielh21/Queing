@@ -1073,6 +1073,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="36" style="3"/>
                         </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="0" red="33" type="rgb"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="50"/>
                       </Properties>
                     </Component>
@@ -1184,10 +1187,18 @@
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="422" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" pref="252" max="-2" attributes="0"/>
                                   <Component id="jScrollPane6" min="-2" pref="410" max="-2" attributes="0"/>
                                   <Component id="jScrollPane7" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
-                                  <Component id="jLabelQuizDonePoints" alignment="0" min="-2" pref="252" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelQuizDonePoints" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelQuizDonePoints1" min="-2" pref="166" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelQuiz_Done_TeamPoints" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelQuiz_Done_TeamPoints1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace pref="36" max="32767" attributes="0"/>
                           </Group>
@@ -1199,11 +1210,17 @@
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jScrollPane7" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jLabelQuizDonePoints" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelQuizDonePoints" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="jLabelQuizDonePoints1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jScrollPane6" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelQuiz_Done_TeamPoints" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="jLabelQuiz_Done_TeamPoints1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" pref="103" max="-2" attributes="0"/>
                               <EmptySpace pref="96" max="32767" attributes="0"/>
@@ -1282,7 +1299,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="jLabel1">
+                    <Component class="javax.swing.JLabel" name="jLabelQuiz_Done_TeamPoints">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Verdana" size="24" style="3"/>
@@ -1290,7 +1307,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="0" red="0" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="200 Points"/>
+                        <Property name="text" type="java.lang.String" value="200"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelQuizDonePoints">
@@ -1301,7 +1318,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="0" red="33" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="50 Points"/>
+                        <Property name="text" type="java.lang.String" value="50"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -1312,6 +1329,28 @@
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="&lt;html&gt; Please invite more to your camp to improve your score &lt;/html&gt;"/>
                         <Property name="horizontalTextPosition" type="int" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelQuizDonePoints1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Verdana" size="24" style="3"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="0" red="33" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Points"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelQuiz_Done_TeamPoints1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Verdana" size="24" style="3"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Points"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1426,6 +1465,7 @@
                                 <BevelBorder/>
                               </Border>
                             </Property>
+                            <Property name="focusable" type="boolean" value="false"/>
                           </Properties>
                         </Component>
                       </SubComponents>
