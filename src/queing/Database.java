@@ -30,6 +30,7 @@ public class Database {
     private static int campID = 0;
     private static int campPoints = 0;
     private static int memberCount = 0;
+    private static boolean Editing = false;
     
     
     // LOGIN
@@ -79,7 +80,6 @@ public class Database {
         PreparedStatement ps = null;
         try  
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement();
             st.executeQuery("select * from user");
             
@@ -89,12 +89,13 @@ public class Database {
                 myID = rs.getInt("id") + 1;
             }
             if( myID == 0 ) myID = 1; // myID must not be 0. Messes with campid detection in main program.
-            ps = conn.prepareStatement("insert into user (ID, username, password, campID, points) values(?,?,?,?,?)");
+            ps = conn.prepareStatement("insert into user (ID, username, password, campID, points, admin) values(?,?,?,?,?,?)");
             ps.setInt(1, myID);
             ps.setString( 2, txt_username ); 
             ps.setString( 3, txt_password );
-            ps.setInt(4,0);
-            ps.setInt(5,0);
+            ps.setInt(4,0); // campID
+            ps.setInt(5,0); // points
+            ps.setInt(6,0); // admin
            
             int i = ps.executeUpdate();
             if( i > 0 )
@@ -126,52 +127,89 @@ public class Database {
     */
    public void RegisterCamp(String txt_campName, String s)
    {
-        Connection conn = null;
-        PreparedStatement ps = null;
+    
         int memberCount = 0;
        
         try  
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
-            Statement st = conn.createStatement();
-            st.executeQuery("select * from camp");
             
-            ResultSet rs = st.getResultSet();
-            while(rs.next()) 
+            Statement st = conn.createStatement();
+            
+            // Now we want to update the users campID.
+            st = conn.createStatement();
+              ResultSet ars = st.executeQuery("SELECT * FROM user WHERE id ="+myID);
+            if (ars.next()) 
             {
-                campID = rs.getInt("id") + 1;
-                memberCount = rs.getInt("memberCount") + 1;
+                
+              campID = ars.getInt("campID");
+              if( ars.getInt("Admin") == 1 ) Editing = true;
+              else Editing = false;
+               
+            }
+
+            if( !Editing )
+            {
+                PreparedStatement ps = null;
+                st.executeQuery("select * from camp");
+
+                ResultSet rs = st.getResultSet();
+                while(rs.next()) 
+                {
+                    campID = rs.getInt("id") + 1;
+                    memberCount = rs.getInt("memberCount") + 1;
+                }
+
+                if( campID == 0 ) campID = 1; // campID must not be 0. Messes with campid detection in main program.
+                ps = conn.prepareStatement("insert into camp(ID, name, image, memberCount) values(?,?,?,?)");
+                
+                InputStream is = new FileInputStream(new File(s));
+                
+                ps.setInt(1, campID);
+                ps.setString( 2, txt_campName ); 
+                ps.setBlob(3,is);
+                ps.setInt(4, memberCount );
+                
+                int i = ps.executeUpdate();
+                 if( i > 0 )
+                 {
+                     JOptionPane.showMessageDialog(null, "Camp created.");
+                 }
+                     else
+                     {
+                        JOptionPane.showMessageDialog(null, "Camp creation failure."); 
+                     }   
+                
+              // Now we want to update the users campID.
+               st = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
+                 ResultSet uprs = st.executeQuery("SELECT * FROM user WHERE id ="+myID);
+               while (uprs.next()) 
+               {
+                  uprs.updateInt("campID", campID);
+                  uprs.updateInt("Admin", 1);
+                  uprs.updateRow();
+               }
+            }
+            else if ( Editing )
+            {
+                 // Now we want to update the camp.
+                 Statement est = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
+                 ResultSet ucrs = est.executeQuery("SELECT * FROM camp");
+                  InputStream is = new FileInputStream(new File(s));
+                  
+                while (ucrs.next()) 
+                {
+                    if( ucrs.getInt("id") == campID)
+                    {
+                        ucrs.updateString("name", txt_campName);
+                        ucrs.updateBlob("image", is);
+                        ucrs.updateRow();
+                    }
+                }
                 
             }
             
-            if( campID == 0 ) campID = 1; // campID must not be 0. Messes with campid detection in main program.
-            ps = conn.prepareStatement("insert into camp(ID, name, image, memberCount) values(?,?,?,?)");
-            InputStream is = new FileInputStream(new File(s));
-            ps.setInt(1, campID);
-            ps.setString( 2, txt_campName ); 
-            ps.setBlob(3,is);
-            ps.setInt(4, memberCount );
-
-            
-            int i = ps.executeUpdate();
-            if( i > 0 )
-            {
-                JOptionPane.showMessageDialog(null, "Camp created.");
-            }
-                else
-                {
-                   JOptionPane.showMessageDialog(null, "Camp creation failure."); 
-                }       
-            
-             // Now we want to update the users campID.
-            st = conn.createStatement();
-            st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-              ResultSet uprs = st.executeQuery("SELECT * FROM user WHERE id ="+myID);
-            while (uprs.next()) 
-            {
-               uprs.updateInt("campID", campID);
-               uprs.updateRow();
-            }
+    
+           
                 
         }
             catch(Exception e)
@@ -179,6 +217,7 @@ public class Database {
                 JOptionPane.showMessageDialog( null, "Camp creation failure" + e ); 
             }
    }
+   
    
    /**
     * Gets the curent users camp name. If the user is in a camp.
@@ -190,7 +229,6 @@ public class Database {
        
         try
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT name FROM camp WHERE id ="+getMyCampID() );
             while (rs.next()) 
@@ -213,7 +251,6 @@ public class Database {
        
         try
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT image FROM camp WHERE id="+getMyCampID() );
             if (rs.next()) 
@@ -238,9 +275,7 @@ public class Database {
         String names = "";
         try
         {
-            
-    
-            conn = DriverManager.getConnection(url,"admin","142536");
+
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT username FROM user WHERE campID="+getMyCampID() );
             while (rs.next()) 
@@ -264,8 +299,6 @@ public class Database {
         try
         {
             
-    
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT name FROM camp" );
             while (rs.next()) 
@@ -293,8 +326,7 @@ public class Database {
         int points = 0;
         try
         {
-    
-            conn = DriverManager.getConnection(url,"admin","142536");
+
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT * FROM user" );
             if (rs.next()) 
@@ -319,7 +351,6 @@ public class Database {
         int memberCount = 0;
         try
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT id FROM user WHERE campID="+getMyCampID() );
             while (rs.next()) 
@@ -357,7 +388,7 @@ public class Database {
         
         try  
         {
-            conn = DriverManager.getConnection(url,"admin","142536");
+        
             Statement st = conn.createStatement();
             st.executeQuery("select * from camp");
             
@@ -399,7 +430,6 @@ public class Database {
         try  
         {
             campPoints = 0;
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
            
              // Now we want to calculate the current camps points.
@@ -442,7 +472,6 @@ public class Database {
          try  
         {
             setMyCampPoints();
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
            
              // Now we want to calculate the current users, camp points.
@@ -470,7 +499,6 @@ public class Database {
           try  
         {
             
-            conn = DriverManager.getConnection(url,"admin","142536");
             Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 
              ResultSet uprs = st.executeQuery("SELECT * FROM user");

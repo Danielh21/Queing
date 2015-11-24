@@ -392,6 +392,13 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelPic_CampInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/CampRetarted.png"))); // NOI18N
 
         jButtonEditCamp.setText("Edit Camp");
+        jButtonEditCamp.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonEditCampActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelCamp_InfoLayout = new javax.swing.GroupLayout(jPanelCamp_Info);
         jPanelCamp_Info.setLayout(jPanelCamp_InfoLayout);
@@ -1211,7 +1218,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addGroup(jPanelInfoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelInfoLayout.setVerticalGroup(
             jPanelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1763,6 +1770,15 @@ System.out.println("No Data");
                  jTextArea1.append( (i+1) + ":["+temp[i]+"] P: " + Points + "\n" );
              }
     }//GEN-LAST:event_jButtonSaveCampActionPerformed
+
+    private void jButtonEditCampActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonEditCampActionPerformed
+    {//GEN-HEADEREND:event_jButtonEditCampActionPerformed
+          if( DB.getMyCampID() != 0 )
+        {
+            jPanelCamp_Info.setVisible(false);
+            jPanelCamp_Register_Camp.setVisible(true);
+        }
+    }//GEN-LAST:event_jButtonEditCampActionPerformed
 
     
      
