@@ -6,15 +6,20 @@
 package queing;
 
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.Timer;
 
 public class Queing_GUI extends javax.swing.JFrame {
 
     public static String s; // For image path.
+    private Timer ti;
+    private int counter = 20;
     Database DB;
     
     boolean running = false;
@@ -1407,51 +1412,51 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizActionPerformed
         if (!running) {
-            if( DB.AccessDB() && DB.getMyID() == 0 ) // If user is not logged in.
-            {
-                jPanelMap.setVisible(false);
-                jPanelHome.setVisible(false);
-                jPanelQuiz.setVisible(false);
-                jPanelInfo.setVisible(false);
-                jPanelCamp.setVisible(true);
-                jPanelCamp_Register_User.setVisible(true);
-                jPanelCamp_Join.setVisible(false);
-                jPanelCamp_Register_Camp.setVisible(false);
-                jPanelCamp_Info.setVisible(false);
-            }
-            else if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // If user is logged in but doesn't have a camp.
-            {
-                jPanelCamp_Register_User.setVisible(false);
-                jPanelMap.setVisible(false);
-                jPanelHome.setVisible(false);
-                jPanelQuiz.setVisible(false);
-                jPanelInfo.setVisible(false);
-                jPanelCamp.setVisible(true);
-                jPanelCamp_Info.setVisible(false);
-                jPanelCamp_Register_Camp.setVisible(false);
-                jPanelCamp_Register_User.setVisible(false);
-                jPanelCamp_Join.setVisible(true);
-                
-                jComboBoxCampHolder.removeAllItems(); // This removes the camps before adding it and makes sure we have no duplicates.
-             
-             String[] temp;
-             String memberList = DB.getAllCampNames();
-             String delimiter = ",";
-             temp = memberList.split(delimiter);
-             for(int i = 0; i < temp.length ; i++)
-             {
-                 jComboBoxCampHolder.addItem(temp[i]);
-             }
-             
-            }
-            else if( DB.getMyCampID() != 0 ) // If the user is in a camp.
-            {
+//            if( DB.AccessDB() && DB.getMyID() == 0 ) // If user is not logged in.
+//            {
+//                jPanelMap.setVisible(false);
+//                jPanelHome.setVisible(false);
+//                jPanelQuiz.setVisible(false);
+//                jPanelInfo.setVisible(false);
+//                jPanelCamp.setVisible(true);
+//                jPanelCamp_Register_User.setVisible(true);
+//                jPanelCamp_Join.setVisible(false);
+//                jPanelCamp_Register_Camp.setVisible(false);
+//                jPanelCamp_Info.setVisible(false);
+//            }
+//            else if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // If user is logged in but doesn't have a camp.
+//            {
+//                jPanelCamp_Register_User.setVisible(false);
+//                jPanelMap.setVisible(false);
+//                jPanelHome.setVisible(false);
+//                jPanelQuiz.setVisible(false);
+//                jPanelInfo.setVisible(false);
+//                jPanelCamp.setVisible(true);
+//                jPanelCamp_Info.setVisible(false);
+//                jPanelCamp_Register_Camp.setVisible(false);
+//                jPanelCamp_Register_User.setVisible(false);
+//                jPanelCamp_Join.setVisible(true);
+//                
+//                jComboBoxCampHolder.removeAllItems(); // This removes the camps before adding it and makes sure we have no duplicates.
+//             
+//             String[] temp;
+//             String memberList = DB.getAllCampNames();
+//             String delimiter = ",";
+//             temp = memberList.split(delimiter);
+//             for(int i = 0; i < temp.length ; i++)
+//             {
+//                 jComboBoxCampHolder.addItem(temp[i]);
+//             }
+//             
+//            }
+//            else if( DB.getMyCampID() != 0 ) // If the user is in a camp.
+//            {
                 jPanelMap.setVisible(false);
                 jPanelHome.setVisible(false);
                 jPanelCamp.setVisible(false);
                 jPanelInfo.setVisible(false);
                 jPanelQuiz.setVisible(true);
-            }
+//            }
         }
     }//GEN-LAST:event_jButtonQuizActionPerformed
 
@@ -1596,6 +1601,8 @@ public class Queing_GUI extends javax.swing.JFrame {
                 jButtonQuiz_Answer4);
         jPanelQuiz_TheQuiz.setVisible(true);
         running = true;
+        ti = new Timer(1000,action);
+        ti.start();
     }//GEN-LAST:event_jButtonEnterQuizActionPerformed
 
     private void jButtonQuizRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizRateActionPerformed
@@ -1607,7 +1614,9 @@ public class Queing_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
 
     private void jButtonQuiz_Answer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer1ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer1.getText());
+        q.checkAnswer(jButtonQuiz_Answer1.getText(),counter);
+        counter=20;
+        jLabelQuiz_Counter.setText(counter+"");
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
                 jButtonQuiz_Answer1,
@@ -1619,12 +1628,15 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelQuiz_TheQuiz.setVisible(false);
             jPanelQuiz_Evaluation.setVisible(true);
             jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+            ti.stop();
         }
 
     }//GEN-LAST:event_jButtonQuiz_Answer1ActionPerformed
 
     private void jButtonQuiz_Answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer2ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer2.getText());
+        q.checkAnswer(jButtonQuiz_Answer2.getText(),counter);
+        counter=20;
+        jLabelQuiz_Counter.setText(counter+"");
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
                 jButtonQuiz_Answer1,
@@ -1636,11 +1648,14 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelQuiz_TheQuiz.setVisible(false);
             jPanelQuiz_Evaluation.setVisible(true);
             jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+            ti.stop();
         }
     }//GEN-LAST:event_jButtonQuiz_Answer2ActionPerformed
 
     private void jButtonQuiz_Answer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer3ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer3.getText());
+        q.checkAnswer(jButtonQuiz_Answer3.getText(),counter);
+        counter=20;
+        jLabelQuiz_Counter.setText(counter+"");
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
                 jButtonQuiz_Answer1,
@@ -1651,11 +1666,14 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelQuiz_TheQuiz.setVisible(false);
             jPanelQuiz_Evaluation.setVisible(true);
             jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+            ti.stop();
         }
     }//GEN-LAST:event_jButtonQuiz_Answer3ActionPerformed
 
     private void jButtonQuiz_Answer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer4ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer4.getText());
+        q.checkAnswer(jButtonQuiz_Answer4.getText(),counter);
+        counter=20;
+        jLabelQuiz_Counter.setText(counter+"");
         jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
         boolean done = q.setAnswers(jTextAreaQuizQuestion,
                 jButtonQuiz_Answer1,
@@ -1667,6 +1685,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelQuiz_TheQuiz.setVisible(false);
             jPanelQuiz_Evaluation.setVisible(true);
             jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+            ti.stop();
         }
     }//GEN-LAST:event_jButtonQuiz_Answer4ActionPerformed
 
@@ -1782,6 +1801,16 @@ System.out.println("No Data");
     //The Logic:
     Quiz q = new Quiz();
     
+    ActionListener action = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(counter == 0){
+                ti.restart();
+            }
+            counter--;
+            jLabelQuiz_Counter.setText(counter+"");
+        }
+    };
     
     //Method to resize the ImageIcon
     public ImageIcon ResizeImage(String imgPath)
