@@ -193,17 +193,15 @@ public class Database {
             {
                  // Now we want to update the camp.
                  Statement est = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
-                 ResultSet ucrs = est.executeQuery("SELECT * FROM camp");
+                 ResultSet ucrs = est.executeQuery("SELECT id, name, image FROM camp");
                   InputStream is = new FileInputStream(new File(s));
                   
-                while (ucrs.next()) 
+                if(ucrs.next()) 
                 {
-                    if( ucrs.getInt("id") == campID)
-                    {
+                        ucrs.updateInt("id", campID);
                         ucrs.updateString("name", txt_campName);
                         ucrs.updateBlob("image", is);
                         ucrs.updateRow();
-                    }
                 }
                 
             }
