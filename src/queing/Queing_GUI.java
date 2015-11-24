@@ -49,8 +49,7 @@ public class Queing_GUI extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jComboBox1 = new javax.swing.JComboBox();
@@ -135,9 +134,6 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelQuiz_Pic_CounterCircle = new javax.swing.JLabel();
         jLabelQuizTextTotalPoints = new javax.swing.JLabel();
         jLabelQuiz_TotalPoints = new javax.swing.JLabel();
-        jPanelQuiz_NotLoggedIn = new javax.swing.JPanel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
         jPanelInfo = new javax.swing.JPanel();
         jLabelInfo = new javax.swing.JLabel();
         jButtonInfo_GeneralInfo = new javax.swing.JButton();
@@ -168,19 +164,25 @@ public class Queing_GUI extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         setSize(new java.awt.Dimension(458, 354));
 
-        jPanelHome.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelHome.setBackground(new java.awt.Color(42, 57, 102));
         jPanelHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelHome.setForeground(new java.awt.Color(255, 255, 255));
         jPanelHome.setPreferredSize(new java.awt.Dimension(414, 290));
 
+        jLabelHome.setBackground(new java.awt.Color(255, 102, 0));
         jLabelHome.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelHome.setForeground(new java.awt.Color(255, 102, 0));
         jLabelHome.setText("<html>Welcome To<br>\n\n Roskilde 2016</html>");
         jLabelHome.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabelHome.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        jLabelPic_Orange.setBackground(new java.awt.Color(255, 102, 0));
+        jLabelPic_Orange.setForeground(new java.awt.Color(255, 102, 0));
         jLabelPic_Orange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Orange Scene.jpg"))); // NOI18N
 
+        jLabelCounter.setBackground(new java.awt.Color(255, 102, 0));
         jLabelCounter.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabelCounter.setForeground(new java.awt.Color(255, 102, 0));
         jLabelCounter.setText("<html>Roskilde Counter : <br> 222 Days, 21 Hours, 24 Minutes </html>");
 
         javax.swing.GroupLayout jPanelHomeLayout = new javax.swing.GroupLayout(jPanelHome);
@@ -211,40 +213,39 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanelCamp.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp.setBackground(new java.awt.Color(42, 57, 102));
         jPanelCamp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelCamp.setPreferredSize(new java.awt.Dimension(502, 567));
 
         jLabelCamp.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelCamp.setForeground(new java.awt.Color(255, 102, 0));
         jLabelCamp.setText("<html>Your Camp</html>");
         jLabelCamp.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabelCamp.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         jLayeredInternal_Camp.setPreferredSize(new java.awt.Dimension(478, 453));
 
-        jPanelCamp_Register_User.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Register_User.setBackground(new java.awt.Color(42, 57, 102));
         jPanelCamp_Register_User.setPreferredSize(new java.awt.Dimension(478, 453));
 
         jLabelUserName.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelUserName.setForeground(new java.awt.Color(255, 102, 0));
         jLabelUserName.setText("Username");
 
         jLabelPassword.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 102, 0));
         jLabelPassword.setText("Password");
 
         jButtonLoginUser.setText("Login");
-        jButtonLoginUser.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonLoginUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonLoginUserActionPerformed(evt);
             }
         });
 
         jButtonRegisterUser.setText("Register");
-        jButtonRegisterUser.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRegisterUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegisterUserActionPerformed(evt);
             }
         });
@@ -288,33 +289,32 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(177, Short.MAX_VALUE))
         );
 
-        jPanelCamp_Register_Camp.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Register_Camp.setBackground(new java.awt.Color(42, 57, 102));
         jPanelCamp_Register_Camp.setPreferredSize(new java.awt.Dimension(478, 453));
 
         jLabelRegisterCamp.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelRegisterCamp.setForeground(new java.awt.Color(255, 102, 0));
         jLabelRegisterCamp.setText("Register Your Camp");
 
         jLabelCampName.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabelCampName.setForeground(new java.awt.Color(255, 102, 0));
         jLabelCampName.setText("Camp Name");
 
         jButtonSaveCamp.setText("Save Camp");
-        jButtonSaveCamp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonSaveCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveCampActionPerformed(evt);
             }
         });
 
         jButtonInsertImage.setText("Insert Image");
-        jButtonInsertImage.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonInsertImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInsertImageActionPerformed(evt);
             }
         });
 
+        jLabelPic_CampRegister.setForeground(new java.awt.Color(255, 102, 0));
         jLabelPic_CampRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Insert Image.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelCamp_Register_CampLayout = new javax.swing.GroupLayout(jPanelCamp_Register_Camp);
@@ -362,15 +362,17 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelCamp_Info.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Info.setBackground(new java.awt.Color(42, 57, 102));
         jPanelCamp_Info.setPreferredSize(new java.awt.Dimension(478, 453));
 
         jLabelCampInfo_CampName.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelCampInfo_CampName.setForeground(new java.awt.Color(255, 102, 0));
         jLabelCampInfo_CampName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelCampInfo_CampName.setText("CAMP [CampName]");
         jLabelCampInfo_CampName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelMemberList.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelMemberList.setForeground(new java.awt.Color(255, 102, 0));
         jLabelMemberList.setText("Members");
 
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -381,6 +383,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTextArea1);
 
         jLabelTotal_Points.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelTotal_Points.setForeground(new java.awt.Color(255, 102, 0));
         jLabelTotal_Points.setText("Total Points:");
 
         jTextFieldTotalPoints.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
@@ -389,13 +392,12 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextFieldTotalPoints.setDisabledTextColor(new java.awt.Color(255, 51, 0));
         jTextFieldTotalPoints.setFocusable(false);
 
+        jLabelPic_CampInfo.setForeground(new java.awt.Color(255, 102, 0));
         jLabelPic_CampInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/CampRetarted.png"))); // NOI18N
 
         jButtonEditCamp.setText("Edit Camp");
-        jButtonEditCamp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonEditCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEditCampActionPerformed(evt);
             }
         });
@@ -450,23 +452,19 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(66, Short.MAX_VALUE))
         );
 
-        jPanelCamp_Join.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelCamp_Join.setBackground(new java.awt.Color(42, 57, 102));
         jPanelCamp_Join.setPreferredSize(new java.awt.Dimension(478, 453));
 
         jButtonJoinCamp.setText("Join Camp");
-        jButtonJoinCamp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonJoinCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonJoinCampActionPerformed(evt);
             }
         });
 
         jButtonRegisterCamp.setText("Register Camp");
-        jButtonRegisterCamp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRegisterCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegisterCampActionPerformed(evt);
             }
         });
@@ -474,6 +472,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jComboBoxCampHolder.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabelBrowseCamps.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelBrowseCamps.setForeground(new java.awt.Color(255, 102, 0));
         jLabelBrowseCamps.setText("Browse Camps!");
 
         javax.swing.GroupLayout jPanelCamp_JoinLayout = new javax.swing.GroupLayout(jPanelCamp_Join);
@@ -582,14 +581,16 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelMap.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelMap.setBackground(new java.awt.Color(42, 57, 102));
         jPanelMap.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelMap.setPreferredSize(new java.awt.Dimension(414, 290));
 
         jLabePic_Map.setBackground(new java.awt.Color(255, 72, 12));
+        jLabePic_Map.setForeground(new java.awt.Color(255, 102, 0));
         jLabePic_Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Roskilde.jpg"))); // NOI18N
 
         jLabelMap.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelMap.setForeground(new java.awt.Color(255, 102, 0));
         jLabelMap.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelMap.setText("<html> Map over Roskilde Festival\n\n</html>");
         jLabelMap.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -614,35 +615,35 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanelQuiz.setBackground(new java.awt.Color(255, 73, 12));
+        jPanelQuiz.setBackground(new java.awt.Color(42, 57, 102));
         jPanelQuiz.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelQuiz.setPreferredSize(new java.awt.Dimension(414, 290));
 
         jLabelQuiz.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuiz.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuiz.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelQuiz.setText("Roskilde Quiz");
 
-        jPanelQuiz_Control.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelQuiz_Control.setBackground(new java.awt.Color(42, 57, 102));
         jPanelQuiz_Control.setLayout(new java.awt.CardLayout());
 
-        jPanelQuiz_Intro.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelQuiz_Intro.setBackground(new java.awt.Color(42, 57, 102));
 
         jScrollPane5.setBorder(null);
         jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jTextAreaQuizIntroText.setEditable(false);
-        jTextAreaQuizIntroText.setBackground(new java.awt.Color(255, 72, 12));
+        jTextAreaQuizIntroText.setBackground(new java.awt.Color(42, 57, 102));
         jTextAreaQuizIntroText.setColumns(20);
         jTextAreaQuizIntroText.setFont(new java.awt.Font("Verdana", 3, 14)); // NOI18N
+        jTextAreaQuizIntroText.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuizIntroText.setRows(5);
         jTextAreaQuizIntroText.setText("Welcome to the Roskilde Quiz 2016!\n\nThis year we have introduced a lot of\nCool stuff, and a new Quiz where you can\nwin prizes.\n\nYour Camp can participate in a quiz \nbattle with other camps, to win cool \nprizes.\n\nSet up a camp with your group members,\nand if you do well, you can win.\n\nYou have 20 seconds to answer the \nquestions and you get extra points for\nbeen fast.\n\nGo and try it now!");
         jScrollPane5.setViewportView(jTextAreaQuizIntroText);
 
         jButtonEnterQuiz.setText("Enter Quiz");
-        jButtonEnterQuiz.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonEnterQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEnterQuizActionPerformed(evt);
             }
         });
@@ -673,33 +674,35 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_Control.add(jPanelQuiz_Intro, "card2");
 
-        jPanelQuiz_Evaluation.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelQuiz_Evaluation.setBackground(new java.awt.Color(42, 57, 102));
 
         jLabelQuizFinal.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuizFinal.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizFinal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelQuizFinal.setText("<html>Quiz Completed! <br>We Hoped You enjoyed</html>");
         jLabelQuizFinal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelQuizPointsQuiz.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
-        jLabelQuizPointsQuiz.setForeground(new java.awt.Color(51, 0, 255));
+        jLabelQuizPointsQuiz.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuizPointsQuiz.setText("50");
 
         jLabelQuizTextPoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuizTextPoints.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizTextPoints.setText("Points");
 
         jLabelQuizTextYouScored.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelQuizTextYouScored.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizTextYouScored.setText("You Scored");
 
         jButtonQuizRate.setText("Rate Quiz");
-        jButtonQuizRate.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuizRate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuizRateActionPerformed(evt);
             }
         });
 
         jLabelRateQuiz.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelRateQuiz.setForeground(new java.awt.Color(255, 102, 0));
         jLabelRateQuiz.setText("Please Rate our Quiz!");
 
         jSlider1.setBackground(new java.awt.Color(255, 72, 12));
@@ -711,18 +714,23 @@ public class Queing_GUI extends javax.swing.JFrame {
         jSlider1.setName(""); // NOI18N
 
         jLabelQuizRateNumber1.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizRateNumber1.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizRateNumber1.setText("1");
 
         jLabelQuizRateNumber2.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizRateNumber2.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizRateNumber2.setText("2");
 
         jLabelQuizRateNumber3.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizRateNumber3.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizRateNumber3.setText("3");
 
         jLabelQuizRateNumber4.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizRateNumber4.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizRateNumber4.setText("4");
 
         jLabelQuizRateNumber5.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelQuizRateNumber5.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizRateNumber5.setText("5");
 
         javax.swing.GroupLayout jPanelQuiz_EvaluationLayout = new javax.swing.GroupLayout(jPanelQuiz_Evaluation);
@@ -794,16 +802,17 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_Control.add(jPanelQuiz_Evaluation, "card3");
 
-        jPanelQuiz_Done.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelQuiz_Done.setBackground(new java.awt.Color(42, 57, 102));
 
         jScrollPane6.setBackground(new java.awt.Color(255, 72, 12));
         jScrollPane6.setBorder(null);
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextAreaQuiz_Done_TeamTotalScore.setBackground(new java.awt.Color(255, 72, 12));
+        jTextAreaQuiz_Done_TeamTotalScore.setBackground(new java.awt.Color(42, 57, 102));
         jTextAreaQuiz_Done_TeamTotalScore.setColumns(20);
         jTextAreaQuiz_Done_TeamTotalScore.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jTextAreaQuiz_Done_TeamTotalScore.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuiz_Done_TeamTotalScore.setRows(5);
         jTextAreaQuiz_Done_TeamTotalScore.setText("Your Camp Scored a Total of:");
         jTextAreaQuiz_Done_TeamTotalScore.setBorder(null);
@@ -814,33 +823,35 @@ public class Queing_GUI extends javax.swing.JFrame {
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane7.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTextAreaQuiz_Done_Thanks.setBackground(new java.awt.Color(255, 72, 12));
+        jTextAreaQuiz_Done_Thanks.setBackground(new java.awt.Color(42, 57, 102));
         jTextAreaQuiz_Done_Thanks.setColumns(20);
         jTextAreaQuiz_Done_Thanks.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jTextAreaQuiz_Done_Thanks.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuiz_Done_Thanks.setRows(5);
         jTextAreaQuiz_Done_Thanks.setText("Thank you for taking Our Quiz!\nYou scored a total of: ");
         jTextAreaQuiz_Done_Thanks.setBorder(null);
         jScrollPane7.setViewportView(jTextAreaQuiz_Done_Thanks);
 
         jLabelQuiz_Done_TeamPoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabelQuiz_Done_TeamPoints.setForeground(new java.awt.Color(0, 0, 255));
+        jLabelQuiz_Done_TeamPoints.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuiz_Done_TeamPoints.setText("200");
 
         jLabelQuizDonePoints.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabelQuizDonePoints.setForeground(new java.awt.Color(51, 0, 255));
+        jLabelQuizDonePoints.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuizDonePoints.setText("50");
 
         jLabel3.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 102, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("<html> Please invite more to your camp to improve your score </html>");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelQuizDonePoints1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabelQuizDonePoints1.setForeground(new java.awt.Color(51, 0, 255));
+        jLabelQuizDonePoints1.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuizDonePoints1.setText("Points");
 
         jLabelQuiz_Done_TeamPoints1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabelQuiz_Done_TeamPoints1.setForeground(new java.awt.Color(0, 0, 255));
+        jLabelQuiz_Done_TeamPoints1.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuiz_Done_TeamPoints1.setText("Points");
 
         javax.swing.GroupLayout jPanelQuiz_DoneLayout = new javax.swing.GroupLayout(jPanelQuiz_Done);
@@ -885,13 +896,14 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_Control.add(jPanelQuiz_Done, "card4");
 
-        jPanelQuiz_TheQuiz.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelQuiz_TheQuiz.setBackground(new java.awt.Color(42, 57, 102));
 
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         jTextAreaQuizQuestion.setColumns(20);
         jTextAreaQuizQuestion.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jTextAreaQuizQuestion.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuizQuestion.setRows(5);
         jTextAreaQuizQuestion.setText("Question Goes Here");
         jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -899,46 +911,39 @@ public class Queing_GUI extends javax.swing.JFrame {
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
 
         jButtonQuiz_Answer1.setText("Answer1");
-        jButtonQuiz_Answer1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuiz_Answer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuiz_Answer1ActionPerformed(evt);
             }
         });
 
         jButtonQuiz_Answer2.setText("Answer2");
-        jButtonQuiz_Answer2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuiz_Answer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuiz_Answer2ActionPerformed(evt);
             }
         });
 
         jButtonQuiz_Answer3.setText("Answer3");
-        jButtonQuiz_Answer3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuiz_Answer3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuiz_Answer3ActionPerformed(evt);
             }
         });
 
         jButtonQuiz_Answer4.setText("Answer4");
-        jButtonQuiz_Answer4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuiz_Answer4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuiz_Answer4ActionPerformed(evt);
             }
         });
 
         jLabelQuiz_Counter.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jLabelQuiz_Counter.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelQuiz_Counter.setForeground(new java.awt.Color(0, 0, 204));
         jLabelQuiz_Counter.setText("20");
 
-        jLabelQuiz_Pic_CounterCircle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/BlueCircle.png"))); // NOI18N
+        jLabelQuiz_Pic_CounterCircle.setBackground(new java.awt.Color(42, 57, 102));
+        jLabelQuiz_Pic_CounterCircle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/OrangeCircle.png"))); // NOI18N
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -970,10 +975,11 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLayeredPane2.setLayer(jLabelQuiz_Pic_CounterCircle, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelQuizTextTotalPoints.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
+        jLabelQuizTextTotalPoints.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizTextTotalPoints.setText("Total Points:");
 
         jLabelQuiz_TotalPoints.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
-        jLabelQuiz_TotalPoints.setForeground(new java.awt.Color(0, 51, 255));
+        jLabelQuiz_TotalPoints.setForeground(new java.awt.Color(255, 0, 0));
         jLabelQuiz_TotalPoints.setText("0");
 
         javax.swing.GroupLayout jPanelQuiz_TheQuizLayout = new javax.swing.GroupLayout(jPanelQuiz_TheQuiz);
@@ -1027,38 +1033,6 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_Control.add(jPanelQuiz_TheQuiz, "card5");
 
-        jPanelQuiz_NotLoggedIn.setBackground(new java.awt.Color(255, 71, 12));
-
-        jScrollPane9.setBorder(null);
-        jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane9.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        jTextArea2.setBackground(new java.awt.Color(255, 71, 12));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
-        jTextArea2.setRows(5);
-        jTextArea2.setText("You have to login and\nbe a member of a camp \nfor taking the quiz.\n\nGo to Your Camp, to join\n2016 Roskilde Quiz!!\n");
-        jScrollPane9.setViewportView(jTextArea2);
-
-        javax.swing.GroupLayout jPanelQuiz_NotLoggedInLayout = new javax.swing.GroupLayout(jPanelQuiz_NotLoggedIn);
-        jPanelQuiz_NotLoggedIn.setLayout(jPanelQuiz_NotLoggedInLayout);
-        jPanelQuiz_NotLoggedInLayout.setHorizontalGroup(
-            jPanelQuiz_NotLoggedInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelQuiz_NotLoggedInLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        jPanelQuiz_NotLoggedInLayout.setVerticalGroup(
-            jPanelQuiz_NotLoggedInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelQuiz_NotLoggedInLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
-        );
-
-        jPanelQuiz_Control.add(jPanelQuiz_NotLoggedIn, "card6");
-
         javax.swing.GroupLayout jPanelQuizLayout = new javax.swing.GroupLayout(jPanelQuiz);
         jPanelQuiz.setLayout(jPanelQuizLayout);
         jPanelQuizLayout.setHorizontalGroup(
@@ -1082,36 +1056,31 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanelInfo.setBackground(new java.awt.Color(255, 72, 12));
+        jPanelInfo.setBackground(new java.awt.Color(42, 57, 102));
         jPanelInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanelInfo.setPreferredSize(new java.awt.Dimension(414, 290));
 
         jLabelInfo.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelInfo.setForeground(new java.awt.Color(255, 102, 0));
         jLabelInfo.setText("Info");
 
         jButtonInfo_GeneralInfo.setText("General Info");
-        jButtonInfo_GeneralInfo.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonInfo_GeneralInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInfo_GeneralInfoActionPerformed(evt);
             }
         });
 
         jButtonInfo_Schedule.setText("Schedule");
-        jButtonInfo_Schedule.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonInfo_Schedule.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInfo_ScheduleActionPerformed(evt);
             }
         });
 
         jButtonInfo_Artist.setText("Artist");
-        jButtonInfo_Artist.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonInfo_Artist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInfo_ArtistActionPerformed(evt);
             }
         });
@@ -1120,6 +1089,7 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jTextAreaArtist.setColumns(20);
         jTextAreaArtist.setFont(new java.awt.Font("Verdana", 3, 14)); // NOI18N
+        jTextAreaArtist.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaArtist.setRows(5);
         jTextAreaArtist.setText("The Artists On Roskilde:\n\nSelena Gomez:\nSelena Marie Gomez (1992) is an American actress, \nsinger and fashion designer.[1] Born and raised in \nGrand Prairie, Texas, she was first featured on the \nchildren's series Barney & Friends in the early 2000s.[5] \nIn 2007, Gomez came to prominence after being cast in \nthe Disney Channel television series Wizards of Waverly \nPlace. She portrayed the starring character Alex Russo \nuntil its conclusion in 2012. She formed her band \nSelena Gomez & the Scene after signing a recording \ncontract with Hollywood Records in 2008; they released \nthe studio albums Kiss & Tell (2009), \nA Year Without Rain (2010), and When the \nSun Goes Down (2011) before beginning a hiatus \nin 2012.\n\nMicheal Jackson:\n(HOLOGRAM)\nMichael Joseph Jackson (29. august 1958 – 25. juni 2009)\nmed tilnavnet \"Kongen af Pop\" var en amerikansk musiker \nog en af de mest kommercielt succesrige entertainere.\nHans unikke bidrag til musik og dans og hans privatliv, \ngjorde ham til en fremtrædende figur inden for \npopulærkulturen i fire årtier.\n\nHan er to gange optaget i Rock and Roll Hall of Fame, \nhar flere rekorder i Guinness Rekordbog — deriblandt \n\"Mest succesrige entertainer nogensinde\" — \n13 Grammy Awards, 13 singler som har ligget nr. 1 på \nhitlisten i USA, og et anslået samlet salgstal på over \n750 millioner plader. Han var en betydelig filantropisk og\n humanitær sponsor af mange millioner dollars til 39 \nvelgørenhedsorganisationer og skaffede også bidrag via \nsin egen Heal the World Foundation.\n\n\n\n\nEminem:\nMarshall Bruce Mathers III (born October 17, 1972),\nbest known by his stage name, Eminem,\nis an American rapper, record producer, actor, and \nsongwriter. Eminem is from Detroit, Michigan. \nIn addition to his solo career, he is a member of D12 and\n(with Royce da 5'9\").");
         jScrollPane2.setViewportView(jTextAreaArtist);
@@ -1141,6 +1111,7 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jTextAreaInfo.setColumns(20);
         jTextAreaInfo.setFont(new java.awt.Font("Verdana", 3, 14)); // NOI18N
+        jTextAreaInfo.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaInfo.setRows(5);
         jTextAreaInfo.setText("Roskilde Festival is the largest North Europeanculture and \nmusic festival and has existed since 1971. \nWe are a non-profit organisation \nconsisting of about 50 full-time employees and thousands \nof volunteers.\n\nVolunteers\nDuring the festival the number of volunteers increases to \nabout 32,000. The volunteers staff\nthe festival stalls, build stages, \nprovide camping security etc.\n\nNon-profit society behind the festival\nRoskilde Festival Charity Society is the organiserof \nRoskilde Festival.\nThe purpose of the society is to support initiatives \nbenefitting children and young people and to support \nhumanitarian and cultural work. The society's work is \nindependent of party politics and has no geographical \nborders");
         jScrollPane1.setViewportView(jTextAreaInfo);
@@ -1162,6 +1133,7 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jTextAreaSchedule.setColumns(20);
         jTextAreaSchedule.setFont(new java.awt.Font("Verdana", 3, 14)); // NOI18N
+        jTextAreaSchedule.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaSchedule.setRows(5);
         jTextAreaSchedule.setText("**************THE SCHEDULE*****************\n\n\nORANGE:\n Thursday:\n10.00 Sys Bjerre\n13.00 Magtens Kooridor\n17.00 Eminiem\n\n\nFriday:\n15.00 Big Stock\n18.00 Rasmus Seebach\n21.00 Bruce \"The Boss\"\n\n\nSaturday:\n14.00 Selena Gomez\n16.00 Michael Jackson (Hologram)\n01.00 Suspect\n\nCOSMOPOL:\n\nThursday:\n12.00 Ray Charles\n16.00 Kim Larsen\n19.00 Shubidua\n\nFriday:\n12.00 Eddie Van Helen\n16.00 ABBA\n21.00 Spice Girls\n\nSaturday:\n12.00 Jay-Z\n15.00 Beyonce\n19.00 BackStreet Boys\n\nARENA:\n\nThursday:\n13.00 Kennth\n16.00 \n\nFriday:\n\nSaturday:\n");
         jScrollPane3.setViewportView(jTextAreaSchedule);
@@ -1276,10 +1248,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jButtonHome.setText("Home");
         jButtonHome.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonHome.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonHome.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
@@ -1290,10 +1260,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jButtonMap.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonMap.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jButtonMap.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonMap.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMapActionPerformed(evt);
             }
         });
@@ -1302,10 +1270,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jButtonYourCamp.setText("Your Camp");
         jButtonYourCamp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonYourCamp.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonYourCamp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonYourCamp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonYourCampActionPerformed(evt);
             }
         });
@@ -1313,10 +1279,8 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jButtonInfo.setText("Info");
         jButtonInfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonInfo.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInfoActionPerformed(evt);
             }
         });
@@ -1325,10 +1289,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jButtonQuiz.setText("Enter Quiz");
         jButtonQuiz.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonQuiz.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButtonQuiz.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuizActionPerformed(evt);
             }
         });
@@ -1914,7 +1876,6 @@ System.out.println("No Data");
     private javax.swing.JPanel jPanelQuiz_Done;
     private javax.swing.JPanel jPanelQuiz_Evaluation;
     private javax.swing.JPanel jPanelQuiz_Intro;
-    private javax.swing.JPanel jPanelQuiz_NotLoggedIn;
     private javax.swing.JPanel jPanelQuiz_TheQuiz;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JScrollPane jScrollPane1;
@@ -1925,11 +1886,9 @@ System.out.println("No Data");
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextAreaArtist;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaQuizIntroText;
