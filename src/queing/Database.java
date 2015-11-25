@@ -337,16 +337,14 @@ public class Database {
       public int getCampMemberPoints(String name)
     {
      
+        name = "'"+name+"'";
         int points = 0;
         try (Statement st = conn.createStatement()) 
         {
-            ResultSet rs = st.executeQuery( "SELECT * FROM user" );
+            ResultSet rs = st.executeQuery( "SELECT id, username, points FROM user WHERE username="+name );
             if (rs.next())
             {
-                if (rs.getString("username").equals(name))
-                {
-                    points = rs.getInt("points");
-                }
+                points = rs.getInt("points");
             }
         }
         
@@ -528,7 +526,6 @@ public class Database {
                     uprs.updateInt("points", points);
                     uprs.updateRow();
                     st.close();
-               
             }
         
         }
