@@ -1413,51 +1413,51 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuizActionPerformed
         if (!running) {
-//            if( DB.AccessDB() && DB.getMyID() == 0 ) // If user is not logged in.
-//            {
-//                jPanelMap.setVisible(false);
-//                jPanelHome.setVisible(false);
-//                jPanelQuiz.setVisible(false);
-//                jPanelInfo.setVisible(false);
-//                jPanelCamp.setVisible(true);
-//                jPanelCamp_Register_User.setVisible(true);
-//                jPanelCamp_Join.setVisible(false);
-//                jPanelCamp_Register_Camp.setVisible(false);
-//                jPanelCamp_Info.setVisible(false);
-//            }
-//            else if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // If user is logged in but doesn't have a camp.
-//            {
-//                jPanelCamp_Register_User.setVisible(false);
-//                jPanelMap.setVisible(false);
-//                jPanelHome.setVisible(false);
-//                jPanelQuiz.setVisible(false);
-//                jPanelInfo.setVisible(false);
-//                jPanelCamp.setVisible(true);
-//                jPanelCamp_Info.setVisible(false);
-//                jPanelCamp_Register_Camp.setVisible(false);
-//                jPanelCamp_Register_User.setVisible(false);
-//                jPanelCamp_Join.setVisible(true);
-//                
-//                jComboBoxCampHolder.removeAllItems(); // This removes the camps before adding it and makes sure we have no duplicates.
-//             
-//             String[] temp;
-//             String memberList = DB.getAllCampNames();
-//             String delimiter = ",";
-//             temp = memberList.split(delimiter);
-//             for(int i = 0; i < temp.length ; i++)
-//             {
-//                 jComboBoxCampHolder.addItem(temp[i]);
-//             }
-//             
-//            }
-//            else if( DB.getMyCampID() != 0 ) // If the user is in a camp.
-//            {
+            if( DB.AccessDB() && DB.getMyID() == 0 ) // If user is not logged in.
+            {
+                jPanelMap.setVisible(false);
+                jPanelHome.setVisible(false);
+                jPanelQuiz.setVisible(false);
+                jPanelInfo.setVisible(false);
+                jPanelCamp.setVisible(true);
+                jPanelCamp_Register_User.setVisible(true);
+                jPanelCamp_Join.setVisible(false);
+                jPanelCamp_Register_Camp.setVisible(false);
+                jPanelCamp_Info.setVisible(false);
+            }
+            else if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // If user is logged in but doesn't have a camp.
+            {
+                jPanelCamp_Register_User.setVisible(false);
+                jPanelMap.setVisible(false);
+                jPanelHome.setVisible(false);
+                jPanelQuiz.setVisible(false);
+                jPanelInfo.setVisible(false);
+                jPanelCamp.setVisible(true);
+                jPanelCamp_Info.setVisible(false);
+                jPanelCamp_Register_Camp.setVisible(false);
+                jPanelCamp_Register_User.setVisible(false);
+                jPanelCamp_Join.setVisible(true);
+                
+                jComboBoxCampHolder.removeAllItems(); // This removes the camps before adding it and makes sure we have no duplicates.
+             
+             String[] temp;
+             String memberList = DB.getAllCampNames();
+             String delimiter = ",";
+             temp = memberList.split(delimiter);
+             for(int i = 0; i < temp.length ; i++)
+             {
+                 jComboBoxCampHolder.addItem(temp[i]);
+             }
+             
+            }
+            else if( DB.getMyCampID() != 0 ) // If the user is in a camp.
+            {
             jPanelMap.setVisible(false);
             jPanelHome.setVisible(false);
             jPanelCamp.setVisible(false);
             jPanelInfo.setVisible(false);
             jPanelQuiz.setVisible(true);
-//            }
+            }
         }
     }//GEN-LAST:event_jButtonQuizActionPerformed
 
