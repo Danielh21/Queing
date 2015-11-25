@@ -17,7 +17,7 @@ class CounterClass {
     void Countertime(JLabel jLabelCounter) {
 
         DateTime currentTime = new DateTime();
-        DateTime RoskildeStart = new DateTime(2016, 6, 25, 18, 0, 0, 0);
+        DateTime RoskildeStart = new DateTime(2016, 6, 25, 19, 0, 0, 0);
         int seconds = Seconds.secondsBetween(currentTime, RoskildeStart).getSeconds();
 
         int noOfDays = seconds / (24 * 60 * 60);
@@ -27,7 +27,7 @@ class CounterClass {
 
         
        jLabelCounter.setText("<html>Roskilde Counter:<br>" + noOfDays + " Days, "
-                + noOfHours + " Hours, " + noOfMinutes + " Minuts, " + noSec + " Seconds</html>");
+                + noOfHours + " Hours, " + noOfMinutes + " Minutes, " + noSec + " Seconds</html>");
 
     }
 

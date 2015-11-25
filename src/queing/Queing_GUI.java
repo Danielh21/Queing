@@ -188,7 +188,7 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jLabelPic_Orange.setBackground(new java.awt.Color(255, 102, 0));
         jLabelPic_Orange.setForeground(new java.awt.Color(255, 102, 0));
-        jLabelPic_Orange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Orange Scene.jpg"))); // NOI18N
+        jLabelPic_Orange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/HomeScreen.jpg"))); // NOI18N
 
         jLabelCounter.setBackground(new java.awt.Color(255, 102, 0));
         jLabelCounter.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -396,7 +396,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelTotal_Points.setForeground(new java.awt.Color(255, 102, 0));
         jLabelTotal_Points.setText("Total Points:");
 
-        jTextFieldTotalPoints.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        jTextFieldTotalPoints.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jTextFieldTotalPoints.setForeground(new java.awt.Color(255, 72, 12));
         jTextFieldTotalPoints.setText("50 Points");
         jTextFieldTotalPoints.setDisabledTextColor(new java.awt.Color(255, 51, 0));
@@ -424,9 +424,9 @@ public class Queing_GUI extends javax.swing.JFrame {
                         .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldTotalPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
+                                .addGap(20, 20, 20)
                                 .addComponent(jButtonEditCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16))
                     .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
@@ -455,11 +455,11 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelCamp_InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCamp_InfoLayout.createSequentialGroup()
-                        .addComponent(jTextFieldTotalPoints, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldTotalPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonEditCamp, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jPanelCamp_Join.setBackground(new java.awt.Color(42, 57, 102));
@@ -974,7 +974,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabelQuiz_Counter)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane2Layout.createSequentialGroup()
                     .addGap(6, 6, 6)
@@ -996,7 +996,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_TheQuiz.setLayout(jPanelQuiz_TheQuizLayout);
         jPanelQuiz_TheQuizLayout.setHorizontalGroup(
             jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
             .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonQuiz_Answer1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
@@ -1012,9 +1012,9 @@ public class Queing_GUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabelQuiz_TotalPoints))
                     .addComponent(jLabelQuizTextTotalPoints))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelQuiz_TheQuizLayout.setVerticalGroup(
             jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1029,15 +1029,13 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonQuiz_Answer3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonQuiz_Answer4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
                         .addComponent(jLabelQuizTextTotalPoints)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelQuiz_TotalPoints)))
+                        .addComponent(jLabelQuiz_TotalPoints))
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
