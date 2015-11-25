@@ -196,26 +196,32 @@ public class Database {
                }
                
             }
+            
             else if ( Editing )
             {
                  // Now we want to update the camp.
                
-                 Statement est = null; 
-                 est = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, 
+                String oldCampName = "'"+getMyCampName()+"'";
+                 PreparedStatement est = null; 
+                 est = conn.prepareStatement( "SELECT id, name FROM camp WHERE name ="+oldCampName, 
+                                             ResultSet.TYPE_SCROLL_SENSITIVE, 
                                              ResultSet.CONCUR_UPDATABLE);
-                 ResultSet ucrs = est.executeQuery("SELECT id, name, image FROM camp WHERE id = " + getMyCampID() );
+                 ResultSet ucrs = est.executeQuery();
                  
                 if(ucrs.next())
                 {   
 
                         ucrs.updateString("name", txt_campName);
-                        ucrs.updateBlob("image", is);
                         ucrs.updateRow();
                         est.close();    
                     
                 } 
                 
-                
+                 est = conn.prepareStatement( "UPDATE camp SET image= ? WHERE name="+oldCampName);
+ 
+                        est.setBlob(1,is);
+                        est.executeUpdate();
+                        est.close();    
             }
                 
         }
