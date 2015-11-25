@@ -1648,39 +1648,55 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonSaveCampActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonSaveCampActionPerformed
     {//GEN-HEADEREND:event_jButtonSaveCampActionPerformed
-        DB.RegisterCamp(jTextFieldGroupName.getText(), s);
+       if( jTextFieldGroupName.getText() != null && s != null )
+       {
+            DB.RegisterCamp(jTextFieldGroupName.getText(), s);
 
-        jPanelMap.setVisible(false);
-        jPanelHome.setVisible(false);
-        jPanelQuiz.setVisible(false);
-        jPanelInfo.setVisible(false);
-        jPanelCamp.setVisible(true);
-        jPanelCamp_Info.setVisible(true);
-        jPanelCamp_Join.setVisible(false);
-        jPanelCamp_Register_Camp.setVisible(false);
-        jPanelCamp_Register_User.setVisible(false);
-        jLabelCampInfo_CampName.setText(DB.getMyCampName());
+            jPanelMap.setVisible(false);
+            jPanelHome.setVisible(false);
+            jPanelQuiz.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelCamp.setVisible(true);
+            jPanelCamp_Info.setVisible(true);
+            jPanelCamp_Join.setVisible(false);
+            jPanelCamp_Register_Camp.setVisible(false);
+            jPanelCamp_Register_User.setVisible(false);
+            jLabelCampInfo_CampName.setText(DB.getMyCampName());
 
-        // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
-        Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon newImage = new ImageIcon(myImg);
-        jLabelPic_CampInfo.setIcon(newImage);
+            // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
+            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
+            ImageIcon newImage = new ImageIcon(myImg);
+            jLabelPic_CampInfo.setIcon(newImage);
 
-        // Update the member list.
-        DB.getCampMemberCount();
-        DB.setMyCampPoints(); // This updates the camps points, as it is based on an average.
-        jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
-        jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
+            // Update the member list.
+            DB.getCampMemberCount();
+            DB.setMyCampPoints(); // This updates the camps points, as it is based on an average.
+            jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
+            jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
 
-        String[] temp;
-        String memberList = DB.getCampMemberNames();
-        String delimiter = ",";
-        temp = memberList.split(delimiter);
-        int Points = 0;
-        for (int i = 0; i < temp.length; i++) {
-            Points = DB.getCampMemberPoints(temp[i]);
-            jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
-        }
+            String[] temp;
+            String memberList = DB.getCampMemberNames();
+            String delimiter = ",";
+            temp = memberList.split(delimiter);
+            int Points = 0;
+            for (int i = 0; i < temp.length; i++) 
+            {
+                Points = DB.getCampMemberPoints(temp[i]);
+                jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
+            }
+        } 
+       else if (jTextFieldGroupName.getText() != null && s == null)
+       {
+            JOptionPane.showMessageDialog( null, "You need to selct an image."); 
+       }
+       else if(jTextFieldGroupName.getText() == null && s != null)
+       {
+            JOptionPane.showMessageDialog( null, "You need to pick a camp name." ); 
+       }
+       else if(jTextFieldGroupName.getText() == null && s == null)
+       {
+            JOptionPane.showMessageDialog( null, "You need to pick a camp name and Image." ); 
+       }
     }//GEN-LAST:event_jButtonSaveCampActionPerformed
 
     private void jButtonEditCampActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonEditCampActionPerformed

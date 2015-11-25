@@ -5,9 +5,11 @@
  */
 package queing;
 
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.*;
 import javax.swing.ImageIcon;
@@ -22,16 +24,15 @@ import javax.swing.JOptionPane;
 public class Database {
     
     private ImageIcon format = null;
-    String url = "jdbc:mysql://91.100.100.141:3306/account"; // URL to our database
-    
-    Connection conn = new DBConnection().connect(url);
+    private static String url = "jdbc:mysql://91.100.100.141:3306/account"; // URL to our database
+    private static Connection conn = new DBConnection().connect(url);
     private static int myID = 0;
     private static int myPoints = 0;
     private static int campID = 0;
     private static int campPoints = 0;
     private static int memberCount = 0;
     private static boolean Editing = false;
-    
+  
     
     // LOGIN
     /**
@@ -43,27 +44,28 @@ public class Database {
     {
         
         String sql = "select * from user where username =? and password =?";
-        try
+        try (PreparedStatement ps = conn.prepareStatement(sql))
         {
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString( 1, txt_username ); 
+            ps.setString( 1, txt_username );
             ps.setString( 2, txt_password );
             ResultSet rs = ps.executeQuery();
             if(rs.next())
             {
-                 myID = rs.getInt("id");
-                 campID = rs.getInt("campID");
+                myID = rs.getInt("id");
+                campID = rs.getInt("campID");
                 JOptionPane.showMessageDialog(null, "Logged in");
             }
-            else 
+            else
             {
                 JOptionPane.showMessageDialog(null, "Username or password invalid.");
             }
         }
+        
         catch(Exception e)
         {
             
         }
+       
         
         
     }
@@ -87,7 +89,10 @@ public class Database {
             while(rs.next())
             {
                 myID = rs.getInt("id") + 1;
+                st.close();
             }
+            
+            
             if( myID == 0 ) myID = 1; // myID must not be 0. Messes with campid detection in main program.
             ps = conn.prepareStatement("insert into user (ID, username, password, campID, points, admin) values(?,?,?,?,?,?)");
             ps.setInt(1, myID);
@@ -107,8 +112,7 @@ public class Database {
                 {
                    JOptionPane.showMessageDialog(null, "User creation failure."); 
                 }    
-            
-            
+            ps.close();
             
             
         } //End of try
@@ -132,7 +136,8 @@ public class Database {
        
         try  
         {
-            
+            InputStream is = new FileInputStream(new File(s)); // The image we're getting.
+              
             Statement st = conn.createStatement();
             
             // Now we want to update the users campID.
@@ -144,8 +149,8 @@ public class Database {
               campID = ars.getInt("campID");
               if( ars.getInt("Admin") == 1 ) Editing = true;
               else Editing = false;
-               
             }
+            st.close();
 
             if( !Editing )
             {
@@ -158,17 +163,15 @@ public class Database {
                     campID = rs.getInt("id") + 1;
                     memberCount = rs.getInt("memberCount") + 1;
                 }
-
+                st.close();
+                
                 if( campID == 0 ) campID = 1; // campID must not be 0. Messes with campid detection in main program.
                 ps = conn.prepareStatement("insert into camp(ID, name, image, memberCount) values(?,?,?,?)");
-                
-                InputStream is = new FileInputStream(new File(s));
-                
+                 
                 ps.setInt(1, campID);
                 ps.setString( 2, txt_campName ); 
                 ps.setBlob(3,is);
                 ps.setInt(4, memberCount );
-                
                 int i = ps.executeUpdate();
                  if( i > 0 )
                  {
@@ -178,41 +181,49 @@ public class Database {
                      {
                         JOptionPane.showMessageDialog(null, "Camp creation failure."); 
                      }   
+                ps.close();
                 
               // Now we want to update the users campID.
-               st = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
+               st = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE,
+                                          ResultSet.CONCUR_UPDATABLE );
                  ResultSet uprs = st.executeQuery("SELECT * FROM user WHERE id ="+myID);
-               while (uprs.next()) 
+               if (uprs.next()) 
                {
                   uprs.updateInt("campID", campID);
                   uprs.updateInt("Admin", 1);
                   uprs.updateRow();
+                  st.close();
                }
+               
             }
             else if ( Editing )
             {
                  // Now we want to update the camp.
-                 Statement est = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
-                 ResultSet ucrs = est.executeQuery("SELECT id, name, image FROM camp");
-                  InputStream is = new FileInputStream(new File(s));
-                  
-                if(ucrs.next()) 
-                {
-                        ucrs.updateInt("id", campID);
+               
+                 Statement est = null; 
+                 est = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, 
+                                             ResultSet.CONCUR_UPDATABLE);
+                 ResultSet ucrs = est.executeQuery("SELECT id, name, image FROM camp WHERE id = " + getMyCampID() );
+                 
+                if(ucrs.next())
+                {   
+
                         ucrs.updateString("name", txt_campName);
                         ucrs.updateBlob("image", is);
                         ucrs.updateRow();
-                }
+                        est.close();    
+                    
+                } 
+                
                 
             }
-            
-    
-           
                 
         }
-            catch(Exception e)
+            catch(FileNotFoundException | SQLException | HeadlessException e)
             {
-                JOptionPane.showMessageDialog( null, "Camp creation failure" + e ); 
+                if(!Editing)
+                JOptionPane.showMessageDialog( null, "Camp creation failure " + e ); 
+                else JOptionPane.showMessageDialog( null, "Camp edit failure " + e ); 
             }
    }
    
@@ -225,15 +236,15 @@ public class Database {
    {
        String campName = "Not initialized.";
        
-        try
+       try (Statement st = conn.createStatement())
         {
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery( "SELECT name FROM camp WHERE id ="+getMyCampID() );
-            while (rs.next()) 
-            {
+           ResultSet rs = st.executeQuery( "SELECT name FROM camp WHERE id ="+getMyCampID() );
+           while (rs.next())
+           {
                campName = rs.getString("name");
-            }
+           }
         }
+        
         catch( Exception e )
         { 
            JOptionPane.showMessageDialog( null, e ); 
@@ -256,6 +267,7 @@ public class Database {
                 byte[] img = rs.getBytes("image");
                 ImageIcon image = new ImageIcon(img);
                 im = image.getImage();
+                st.close();
                 return im;
             }
         }
@@ -271,17 +283,16 @@ public class Database {
     {
      
         String names = "";
-        try
+        
+        try (Statement st = conn.createStatement()) 
         {
-
-            Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT username FROM user WHERE campID="+getMyCampID() );
-            while (rs.next()) 
+            while (rs.next())
             {
                 names += rs.getString("username") + ",";
             }
-           
         }
+
         catch( Exception e )
         {
             JOptionPane.showMessageDialog( null, e ); 
@@ -294,17 +305,16 @@ public class Database {
     {
      
         String names = "";
-        try
+
+        try (Statement st = conn.createStatement()) 
         {
-            
-            Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT name FROM camp" );
-            while (rs.next()) 
+            while (rs.next())
             {
                 names += rs.getString("name") + ",";
             }
-           
         }
+        
         catch( Exception e )
         {
             JOptionPane.showMessageDialog( null, e ); 
@@ -322,20 +332,19 @@ public class Database {
     {
      
         int points = 0;
-        try
+        try (Statement st = conn.createStatement()) 
         {
-
-            Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery( "SELECT * FROM user" );
-            if (rs.next()) 
+            if (rs.next())
             {
                 if (rs.getString("username").equals(name))
                 {
                     points = rs.getInt("points");
                 }
             }
-           
         }
+        
+        
         catch( Exception e )
         {
             JOptionPane.showMessageDialog( null, e ); 
@@ -355,12 +364,13 @@ public class Database {
             {
                 memberCount += 1;
             }
+            
         }
         catch( Exception e )
         {
             JOptionPane.showMessageDialog( null, e ); 
         }
-
+        
         return memberCount;
     }
    
@@ -378,6 +388,7 @@ public class Database {
     /**
      * This methods returns the current users camp ID.
      * returns 0 if no ID has been assigned.
+     * @param name
      * @return 
      */
     
@@ -386,34 +397,37 @@ public class Database {
         
         try  
         {
-        
-            Statement st = conn.createStatement();
-            st.executeQuery("select * from camp");
+            name = "'"+name+"'"; 
+            // First we get the camps id.
+            Statement sts = conn.createStatement();
+            sts.executeQuery( "SELECT * FROM camp WHERE name ="+name);
             
-            ResultSet rs = st.getResultSet();
-            while(rs.next()) 
+            ResultSet rs = sts.getResultSet();
+            if(rs.next()) 
             {
-                if( rs.getString("name").equals(name))
-                {
-                   campID = rs.getInt("id");    
-                }
+ 
+                campID = rs.getInt("id");  
+                sts.close();
  
             }
             
+           
+            
              // Now we want to update the users campID.
-            st = conn.createStatement();
-            st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-              ResultSet uprs = st.executeQuery("SELECT * FROM user WHERE id ="+myID);
-            while (uprs.next()) 
+           
+           Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+              ResultSet updrs = st.executeQuery( "SELECT id, campID FROM user WHERE id="+getMyID() );
+            if (updrs.next()) 
             {
-               uprs.updateInt("campID", campID);
-               uprs.updateRow();
+                updrs.updateInt("campID", campID);
+                updrs.updateRow();
+                st.close();
             }
                 
         }
             catch(Exception e)
             {
-                JOptionPane.showMessageDialog( null, "Error updating user campID" + e ); 
+                JOptionPane.showMessageDialog( null, "Error updating user campID " + e ); 
             }
         
     }
@@ -442,7 +456,7 @@ public class Database {
                 }
                
             }
-            
+            st.close();
                 campPoints = campPoints / getCampMemberCount();
             
                 
@@ -457,11 +471,11 @@ public class Database {
                     uprs.updateRow();
                 }
             }
-             
+            st.close(); 
         }
             catch(Exception e)
             {
-                JOptionPane.showMessageDialog( null, e ); 
+                JOptionPane.showMessageDialog( null, "setMyCampPoints() : "+ e ); 
             }
    }
     
@@ -479,13 +493,14 @@ public class Database {
                if (rs.getInt("id") == getMyCampID() )
                 {
                     campPoints = rs.getInt("CampPoints");
+                    st.close();
                 }
             }
-        
+            
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog( null, e ); 
+            JOptionPane.showMessageDialog( null, "getMyCampPoints(): " + e ); 
         }
          
         return campPoints;
@@ -497,23 +512,23 @@ public class Database {
           try  
         {
             
-            Statement st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+            Statement st = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );
 
-             ResultSet uprs = st.executeQuery("SELECT * FROM user");
+            ResultSet uprs = st.executeQuery("SELECT id, points FROM user WHERE id="+getMyID() );
              // Now we want to update the current users points.
             if ( uprs.next() ) 
             {
-                if( uprs.getInt("id") == getMyID() )
-                {
+          
                     uprs.updateInt("points", points);
                     uprs.updateRow();
-                }
+                    st.close();
+               
             }
         
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog( null, e ); 
+            JOptionPane.showMessageDialog( null, "SetMyPoints(): " + e ); 
         }
           
         setMyCampPoints();
@@ -525,9 +540,10 @@ public class Database {
      * @return
      * 
      */
+    
    public boolean AccessDB()
    {
-       Connection conn = new DBConnection().connect(url);
+       
        if(conn != null)
        {
            return true;
