@@ -824,7 +824,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuiz_Done_TeamTotalScore.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jTextAreaQuiz_Done_TeamTotalScore.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuiz_Done_TeamTotalScore.setRows(5);
-        jTextAreaQuiz_Done_TeamTotalScore.setText("Your Camp Scored a Total of:");
+        jTextAreaQuiz_Done_TeamTotalScore.setText(" Your camp has a total score of:");
         jTextAreaQuiz_Done_TeamTotalScore.setBorder(null);
         jScrollPane6.setViewportView(jTextAreaQuiz_Done_TeamTotalScore);
 
@@ -869,19 +869,20 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_DoneLayout.setHorizontalGroup(
             jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
-                        .addComponent(jLabelQuizDonePoints)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelQuizDonePoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
-                        .addComponent(jLabelQuiz_Done_TeamPoints)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelQuiz_Done_TeamPoints1)))
+                .addContainerGap()
+                .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
+                            .addComponent(jLabelQuizDonePoints)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabelQuizDonePoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelQuiz_DoneLayout.createSequentialGroup()
+                            .addComponent(jLabelQuiz_Done_TeamPoints)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabelQuiz_Done_TeamPoints1))))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanelQuiz_DoneLayout.setVerticalGroup(
@@ -901,7 +902,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addComponent(jLabelQuiz_Done_TeamPoints1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jPanelQuiz_Control.add(jPanelQuiz_Done, "card4");
@@ -996,7 +997,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_TheQuiz.setLayout(jPanelQuiz_TheQuizLayout);
         jPanelQuiz_TheQuizLayout.setHorizontalGroup(
             jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
             .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonQuiz_Answer1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
@@ -1100,6 +1101,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaArtist.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaArtist.setRows(5);
         jTextAreaArtist.setText("The Artists On Roskilde:\n\nSelena Gomez:\nSelena Marie Gomez (1992) is an American actress, \nsinger and fashion designer.[1] Born and raised in \nGrand Prairie, Texas, she was first featured on the \nchildren's series Barney & Friends in the early 2000s.[5] \nIn 2007, Gomez came to prominence after being cast in \nthe Disney Channel television series Wizards of Waverly \nPlace. She portrayed the starring character Alex Russo \nuntil its conclusion in 2012. She formed her band \nSelena Gomez & the Scene after signing a recording \ncontract with Hollywood Records in 2008; they released \nthe studio albums Kiss & Tell (2009), \nA Year Without Rain (2010), and When the \nSun Goes Down (2011) before beginning a hiatus \nin 2012.\n\nMicheal Jackson:\n(HOLOGRAM)\nMichael Joseph Jackson (29. august 1958 – 25. juni 2009)\nmed tilnavnet \"Kongen af Pop\" var en amerikansk musiker \nog en af de mest kommercielt succesrige entertainere.\nHans unikke bidrag til musik og dans og hans privatliv, \ngjorde ham til en fremtrædende figur inden for \npopulærkulturen i fire årtier.\n\nHan er to gange optaget i Rock and Roll Hall of Fame, \nhar flere rekorder i Guinness Rekordbog — deriblandt \n\"Mest succesrige entertainer nogensinde\" — \n13 Grammy Awards, 13 singler som har ligget nr. 1 på \nhitlisten i USA, og et anslået samlet salgstal på over \n750 millioner plader. Han var en betydelig filantropisk og\n humanitær sponsor af mange millioner dollars til 39 \nvelgørenhedsorganisationer og skaffede også bidrag via \nsin egen Heal the World Foundation.\n\n\n\n\nEminem:\nMarshall Bruce Mathers III (born October 17, 1972),\nbest known by his stage name, Eminem,\nis an American rapper, record producer, actor, and \nsongwriter. Eminem is from Detroit, Michigan. \nIn addition to his solo career, he is a member of D12 and\n(with Royce da 5'9\").");
+        jTextAreaArtist.grabFocus();
+        jTextAreaArtist.setCaretPosition(20);
         jScrollPane2.setViewportView(jTextAreaArtist);
 
         javax.swing.GroupLayout jPanelInfo_ArtistLayout = new javax.swing.GroupLayout(jPanelInfo_Artist);
@@ -1122,6 +1125,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaInfo.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaInfo.setRows(5);
         jTextAreaInfo.setText("Roskilde Festival is the largest North Europeanculture and \nmusic festival and has existed since 1971. \nWe are a non-profit organisation \nconsisting of about 50 full-time employees and thousands \nof volunteers.\n\nVolunteers\nDuring the festival the number of volunteers increases to \nabout 32,000. The volunteers staff\nthe festival stalls, build stages, \nprovide camping security etc.\n\nNon-profit society behind the festival\nRoskilde Festival Charity Society is the organiserof \nRoskilde Festival.\nThe purpose of the society is to support initiatives \nbenefitting children and young people and to support \nhumanitarian and cultural work. The society's work is \nindependent of party politics and has no geographical \nborders");
+        jTextAreaInfo.grabFocus();
+        jTextAreaInfo.setCaretPosition(20);
         jScrollPane1.setViewportView(jTextAreaInfo);
 
         javax.swing.GroupLayout jPanelInfo_GeneralInfoLayout = new javax.swing.GroupLayout(jPanelInfo_GeneralInfo);
@@ -1144,6 +1149,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaSchedule.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaSchedule.setRows(5);
         jTextAreaSchedule.setText("**************THE SCHEDULE*****************\n\n\nORANGE:\n Thursday:\n10.00 Sys Bjerre\n13.00 Magtens Kooridor\n17.00 Eminiem\n\n\nFriday:\n15.00 Big Stock\n18.00 Rasmus Seebach\n21.00 Bruce \"The Boss\"\n\n\nSaturday:\n14.00 Selena Gomez\n16.00 Michael Jackson (Hologram)\n01.00 Suspect\n\nCOSMOPOL:\n\nThursday:\n12.00 Ray Charles\n16.00 Kim Larsen\n19.00 Shubidua\n\nFriday:\n12.00 Eddie Van Helen\n16.00 ABBA\n21.00 Spice Girls\n\nSaturday:\n12.00 Jay-Z\n15.00 Beyonce\n19.00 BackStreet Boys\n\nARENA:\n\nThursday:\n13.00 Kennth\n16.00 \n\nFriday:\n\nSaturday:\n");
+        jTextAreaSchedule.grabFocus();
+        jTextAreaSchedule.setCaretPosition(20);
         jScrollPane3.setViewportView(jTextAreaSchedule);
 
         javax.swing.GroupLayout jPanelInfo_ScheduleLayout = new javax.swing.GroupLayout(jPanelInfo_Schedule);
@@ -1221,7 +1228,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1229,7 +1236,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1241,7 +1248,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
         );
@@ -1602,6 +1609,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_Evaluation.setVisible(false);
         jPanelQuiz_Done.setVisible(true);
         jLabelQuizDonePoints.setText(q.getPointsAsString());
+        jLabelQuiz_Done_TeamPoints.setText(""+DB.getMyCampPoints());
         DB.setMyPoints(q.getPoints());
         running = false;
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
@@ -1905,5 +1913,4 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTotalPoints;
     private javax.swing.JTextField jTextFieldUserName;
     // End of variables declaration//GEN-END:variables
-
 }

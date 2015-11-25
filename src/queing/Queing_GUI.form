@@ -1286,20 +1286,22 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" min="-2" pref="422" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane6" min="-2" pref="410" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane7" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelQuizDonePoints" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jLabelQuizDonePoints1" min="-2" pref="166" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelQuiz_Done_TeamPoints" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jLabelQuiz_Done_TeamPoints1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jScrollPane6" min="-2" pref="434" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel3" min="-2" pref="422" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane7" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelQuizDonePoints" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLabelQuizDonePoints1" min="-2" pref="166" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelQuiz_Done_TeamPoints" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLabelQuiz_Done_TeamPoints1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                               <EmptySpace pref="36" max="32767" attributes="0"/>
@@ -1325,7 +1327,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" pref="103" max="-2" attributes="0"/>
-                              <EmptySpace pref="96" max="32767" attributes="0"/>
+                              <EmptySpace pref="83" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1361,7 +1363,7 @@
                               <Color blue="0" green="66" red="ff" type="rgb"/>
                             </Property>
                             <Property name="rows" type="int" value="5"/>
-                            <Property name="text" type="java.lang.String" value="Your Camp Scored a Total of:"/>
+                            <Property name="text" type="java.lang.String" value=" Your camp has a total score of:"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="null"/>
                             </Property>
@@ -1481,7 +1483,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane8" pref="476" max="32767" attributes="0"/>
+                          <Component id="jScrollPane8" pref="482" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jButtonQuiz_Answer1" pref="233" max="32767" attributes="0"/>
@@ -1850,6 +1852,9 @@
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Micheal Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson (29. august 1958 &#x2013; 25. juni 2009)&#xa;med tilnavnet &quot;Kongen af Pop&quot; var en amerikansk musiker &#xa;og en af de mest kommercielt succesrige entertainere.&#xa;Hans unikke bidrag til musik og dans og hans privatliv, &#xa;gjorde ham til en fremtr&#xe6;dende figur inden for &#xa;popul&#xe6;rkulturen i fire &#xe5;rtier.&#xa;&#xa;Han er to gange optaget i Rock and Roll Hall of Fame, &#xa;har flere rekorder i Guinness Rekordbog &#x2014; deriblandt &#xa;&quot;Mest succesrige entertainer nogensinde&quot; &#x2014; &#xa;13 Grammy Awards, 13 singler som har ligget nr. 1 p&#xe5; &#xa;hitlisten i USA, og et ansl&#xe5;et samlet salgstal p&#xe5; over &#xa;750 millioner plader. Han var en betydelig filantropisk og&#xa; humanit&#xe6;r sponsor af mange millioner dollars til 39 &#xa;velg&#xf8;renhedsorganisationer og skaffede ogs&#xe5; bidrag via &#xa;sin egen Heal the World Foundation.&#xa;&#xa;&#xa;&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
                           </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextAreaArtist.grabFocus();&#xa;jTextAreaArtist.setCaretPosition(20);"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1897,6 +1902,9 @@
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="Roskilde Festival is the largest North Europeanculture and &#xa;music festival and has existed since 1971. &#xa;We are a non-profit organisation &#xa;consisting of about 50 full-time employees and thousands &#xa;of volunteers.&#xa;&#xa;Volunteers&#xa;During the festival the number of volunteers increases to &#xa;about 32,000. The volunteers staff&#xa;the festival stalls, build stages, &#xa;provide camping security etc.&#xa;&#xa;Non-profit society behind the festival&#xa;Roskilde Festival Charity Society is the organiserof &#xa;Roskilde Festival.&#xa;The purpose of the society is to support initiatives &#xa;benefitting children and young people and to support &#xa;humanitarian and cultural work. The society&apos;s work is &#xa;independent of party politics and has no geographical &#xa;borders"/>
                           </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextAreaInfo.grabFocus();&#xa;jTextAreaInfo.setCaretPosition(20);"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1944,6 +1952,9 @@
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="**************THE SCHEDULE*****************&#xa;&#xa;&#xa;ORANGE:&#xa; Thursday:&#xa;10.00 Sys Bjerre&#xa;13.00 Magtens Kooridor&#xa;17.00 Eminiem&#xa;&#xa;&#xa;Friday:&#xa;15.00 Big Stock&#xa;18.00 Rasmus Seebach&#xa;21.00 Bruce &quot;The Boss&quot;&#xa;&#xa;&#xa;Saturday:&#xa;14.00 Selena Gomez&#xa;16.00 Michael Jackson (Hologram)&#xa;01.00 Suspect&#xa;&#xa;COSMOPOL:&#xa;&#xa;Thursday:&#xa;12.00 Ray Charles&#xa;16.00 Kim Larsen&#xa;19.00 Shubidua&#xa;&#xa;Friday:&#xa;12.00 Eddie Van Helen&#xa;16.00 ABBA&#xa;21.00 Spice Girls&#xa;&#xa;Saturday:&#xa;12.00 Jay-Z&#xa;15.00 Beyonce&#xa;19.00 BackStreet Boys&#xa;&#xa;ARENA:&#xa;&#xa;Thursday:&#xa;13.00 Kennth&#xa;16.00 &#xa;&#xa;Friday:&#xa;&#xa;Saturday:&#xa;"/>
                           </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextAreaSchedule.grabFocus();&#xa;jTextAreaSchedule.setCaretPosition(20);"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
