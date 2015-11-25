@@ -461,8 +461,6 @@ public class Database {
                
             }
             st.close();
-                campPoints = campPoints / getCampMemberCount();
-            
                 
              st = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
              ResultSet uprs = st.executeQuery("SELECT * FROM camp");
