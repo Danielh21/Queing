@@ -21,7 +21,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     private Timer ti;
     private int counter = 20;
     Database DB;
-    
+
     boolean running = false;
 
     public Queing_GUI() {
@@ -1342,7 +1342,7 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonYourCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonYourCampActionPerformed
         if (!running) {
-            if( DB.AccessDB() && DB.getMyID() == 0 ) // If we aren't logged in.
+            if (DB.AccessDB() && DB.getMyID() == 0) // If we aren't logged in.
             {
                 jPanelMap.setVisible(false);
                 jPanelHome.setVisible(false);
@@ -1353,8 +1353,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 jPanelCamp_Join.setVisible(false);
                 jPanelCamp_Register_Camp.setVisible(false);
                 jPanelCamp_Info.setVisible(false);
-            }
-            else if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // If we are logged in but we don't have a camp.
+            } else if (DB.getMyID() != 0 && DB.getMyCampID() == 0) // If we are logged in but we don't have a camp.
             {
                 jPanelMap.setVisible(false);
                 jPanelHome.setVisible(false);
@@ -1365,8 +1364,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 jPanelCamp_Info.setVisible(false);
                 jPanelCamp_Register_Camp.setVisible(false);
                 jPanelCamp_Register_User.setVisible(false);
-            }
-            else if( DB.getMyCampID() != 0 ) // If we are in a camp.
+            } else if (DB.getMyCampID() != 0) // If we are in a camp.
             {
                 jPanelMap.setVisible(false);
                 jPanelHome.setVisible(false);
@@ -1378,35 +1376,33 @@ public class Queing_GUI extends javax.swing.JFrame {
                 jPanelCamp_Register_Camp.setVisible(false);
                 jPanelCamp_Register_User.setVisible(false);
 
-                jLabelCampInfo_CampName.setText( DB.getMyCampName() );     
+                jLabelCampInfo_CampName.setText(DB.getMyCampName());
 
                 // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
-                Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(),Image.SCALE_SMOOTH);
+                Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
                 ImageIcon newImage = new ImageIcon(myImg);
                 jLabelPic_CampInfo.setIcon(newImage);
-                
+
                 // Updates the camp points text field.
                 jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
-                
+
                 // Update the member list.
                 DB.getCampMemberCount();
                 jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
 
-                 String[] temp;
-                 String memberList = DB.getCampMemberNames();
-                 String delimiter = ",";
-                 temp = memberList.split(delimiter);
-                 int Points = 0;
-                 for(int i = 0; i < temp.length ; i++)
-                 {
-                     Points = DB.getCampMemberPoints(temp[i]);
-                     jTextArea1.append( (i+1) + ":["+temp[i]+"] P: " + Points + "\n" );
-                 }
+                String[] temp;
+                String memberList = DB.getCampMemberNames();
+                String delimiter = ",";
+                temp = memberList.split(delimiter);
+                int Points = 0;
+                for (int i = 0; i < temp.length; i++) {
+                    Points = DB.getCampMemberPoints(temp[i]);
+                    jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
+                }
 
-
-
+            } else {
+                JOptionPane.showMessageDialog(null, "Could not connect to DB");
             }
-            else JOptionPane.showMessageDialog(null, "Could not connect to DB"); 
         }
     }//GEN-LAST:event_jButtonYourCampActionPerformed
 
@@ -1451,11 +1447,11 @@ public class Queing_GUI extends javax.swing.JFrame {
 //            }
 //            else if( DB.getMyCampID() != 0 ) // If the user is in a camp.
 //            {
-                jPanelMap.setVisible(false);
-                jPanelHome.setVisible(false);
-                jPanelCamp.setVisible(false);
-                jPanelInfo.setVisible(false);
-                jPanelQuiz.setVisible(true);
+            jPanelMap.setVisible(false);
+            jPanelHome.setVisible(false);
+            jPanelCamp.setVisible(false);
+            jPanelInfo.setVisible(false);
+            jPanelQuiz.setVisible(true);
 //            }
         }
     }//GEN-LAST:event_jButtonQuizActionPerformed
@@ -1494,58 +1490,53 @@ public class Queing_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonInfo_ScheduleActionPerformed
 
     private void jButtonLoginUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginUserActionPerformed
-        DB.Login( jTextFieldUserName.getText(), jPasswordField.getText() );
-        
-        if( DB.getMyID() != 0 && DB.getMyCampID() == 0 ) // Making sure we have logged in before moving on. 
+        DB.Login(jTextFieldUserName.getText(), jPasswordField.getText());
+
+        if (DB.getMyID() != 0 && DB.getMyCampID() == 0) // Making sure we have logged in before moving on. 
         {
             jPanelCamp_Register_User.setVisible(false);
-            jPanelCamp_Join.setVisible(true); 
+            jPanelCamp_Join.setVisible(true);
             jComboBoxCampHolder.removeAllItems(); // This removes the camps before adding it and makes sure we have no duplicates.
-             
-             String[] temp;
-             String memberList = DB.getAllCampNames();
-             String delimiter = ",";
-             temp = memberList.split(delimiter);
-             for(int i = 0; i < temp.length ; i++)
-             {
-                 jComboBoxCampHolder.addItem(temp[i]);
-             }
-        }
-        else if( DB.getMyCampID() != 0 ) 
-        {
+
+            String[] temp;
+            String memberList = DB.getAllCampNames();
+            String delimiter = ",";
+            temp = memberList.split(delimiter);
+            for (int i = 0; i < temp.length; i++) {
+                jComboBoxCampHolder.addItem(temp[i]);
+            }
+        } else if (DB.getMyCampID() != 0) {
             jPanelCamp_Register_User.setVisible(false);
             jPanelCamp_Info.setVisible(true);
-            jLabelCampInfo_CampName.setText( DB.getMyCampName() );
-            
+            jLabelCampInfo_CampName.setText(DB.getMyCampName());
+
             // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
-            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(),Image.SCALE_SMOOTH);
+            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon newImage = new ImageIcon(myImg);
             jLabelPic_CampInfo.setIcon(newImage);
-            
+
             // Update the member list.
             DB.getCampMemberCount();
             jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
             jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
-             
-             String[] temp;
-             String memberList = DB.getCampMemberNames();
-             String delimiter = ",";
-             temp = memberList.split(delimiter);
-             int Points = 0;
-             for(int i = 0; i < temp.length ; i++)
-             {
-                 Points = DB.getCampMemberPoints(temp[i]);
-                 jTextArea1.append( (i+1) + ":["+temp[i]+"] P: " + Points + "\n" );
-             }
+
+            String[] temp;
+            String memberList = DB.getCampMemberNames();
+            String delimiter = ",";
+            temp = memberList.split(delimiter);
+            int Points = 0;
+            for (int i = 0; i < temp.length; i++) {
+                Points = DB.getCampMemberPoints(temp[i]);
+                jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
+            }
         }
     }//GEN-LAST:event_jButtonLoginUserActionPerformed
 
     private void jButtonJoinCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJoinCampActionPerformed
-       String name=jComboBoxCampHolder.getSelectedItem().toString();
+        String name = jComboBoxCampHolder.getSelectedItem().toString();
         DB.joinCamp(name); // This add the user to the camp by giving him the camp ID.
-        
-       if( DB.getMyCampID() != 0 ) 
-        {
+
+        if (DB.getMyCampID() != 0) {
             jPanelMap.setVisible(false);
             jPanelHome.setVisible(false);
             jPanelQuiz.setVisible(false);
@@ -1555,44 +1546,43 @@ public class Queing_GUI extends javax.swing.JFrame {
             jPanelCamp_Join.setVisible(false);
             jPanelCamp_Register_Camp.setVisible(false);
             jPanelCamp_Register_User.setVisible(false);
-            jLabelCampInfo_CampName.setText( DB.getMyCampName() );
-            
+            jLabelCampInfo_CampName.setText(DB.getMyCampName());
+
             // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
-            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(),Image.SCALE_SMOOTH);
+            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon newImage = new ImageIcon(myImg);
             jLabelPic_CampInfo.setIcon(newImage);
-            
+
             // Update the member list.
             DB.getCampMemberCount();
             DB.setMyCampPoints(); // This updates the camps points, as it is based on an average.
             jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
             jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
-             
-             String[] temp;
-             String memberList = DB.getCampMemberNames();
-             String delimiter = ",";
-             temp = memberList.split(delimiter);
-             int Points = 0;
-             for(int i = 0; i < temp.length ; i++)
-             {
-                 Points = DB.getCampMemberPoints(temp[i]);
-                 jTextArea1.append( (i+1) + ":["+temp[i]+"] P: " + Points + "\n" );
-             }
+
+            String[] temp;
+            String memberList = DB.getCampMemberNames();
+            String delimiter = ",";
+            temp = memberList.split(delimiter);
+            int Points = 0;
+            for (int i = 0; i < temp.length; i++) {
+                Points = DB.getCampMemberPoints(temp[i]);
+                jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
+            }
         }
 
     }//GEN-LAST:event_jButtonJoinCampActionPerformed
 
     private void jButtonRegisterCampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterCampActionPerformed
-         if( DB.getMyCampID() == 0 )
-        {
+        if (DB.getMyCampID() == 0) {
             jPanelCamp_Join.setVisible(false);
             jPanelCamp_Register_Camp.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You're already in a camp.");
         }
-        else JOptionPane.showMessageDialog(null, "You're already in a camp.");
     }//GEN-LAST:event_jButtonRegisterCampActionPerformed
 
     private void jButtonEnterQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnterQuizActionPerformed
-        
+
         jPanelQuiz_Intro.setVisible(false);
         q.setAnswers(jTextAreaQuizQuestion,
                 jButtonQuiz_Answer1,
@@ -1601,7 +1591,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 jButtonQuiz_Answer4);
         jPanelQuiz_TheQuiz.setVisible(true);
         running = true;
-        ti = new Timer(1000,action);
+        ti = new Timer(1000, action);
         ti.start();
     }//GEN-LAST:event_jButtonEnterQuizActionPerformed
 
@@ -1614,79 +1604,24 @@ public class Queing_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
 
     private void jButtonQuiz_Answer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer1ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer1.getText(),counter);
-        counter=20;
-        jLabelQuiz_Counter.setText(counter+"");
-        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
-        boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                jButtonQuiz_Answer1,
-                jButtonQuiz_Answer2,
-                jButtonQuiz_Answer3,
-                jButtonQuiz_Answer4);
-
-        if (done) {
-            jPanelQuiz_TheQuiz.setVisible(false);
-            jPanelQuiz_Evaluation.setVisible(true);
-            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-            ti.stop();
-        }
+        q.checkAnswer(jButtonQuiz_Answer1.getText(), counter);
+        setQuestion();
 
     }//GEN-LAST:event_jButtonQuiz_Answer1ActionPerformed
 
     private void jButtonQuiz_Answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer2ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer2.getText(),counter);
-        counter=20;
-        jLabelQuiz_Counter.setText(counter+"");
-        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
-        boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                jButtonQuiz_Answer1,
-                jButtonQuiz_Answer2,
-                jButtonQuiz_Answer3,
-                jButtonQuiz_Answer4);
-
-        if (done) {
-            jPanelQuiz_TheQuiz.setVisible(false);
-            jPanelQuiz_Evaluation.setVisible(true);
-            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-            ti.stop();
-        }
+        q.checkAnswer(jButtonQuiz_Answer2.getText(), counter);
+        setQuestion();
     }//GEN-LAST:event_jButtonQuiz_Answer2ActionPerformed
 
     private void jButtonQuiz_Answer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer3ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer3.getText(),counter);
-        counter=20;
-        jLabelQuiz_Counter.setText(counter+"");
-        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
-        boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                jButtonQuiz_Answer1,
-                jButtonQuiz_Answer2,
-                jButtonQuiz_Answer3,
-                jButtonQuiz_Answer4);
-        if (done) {
-            jPanelQuiz_TheQuiz.setVisible(false);
-            jPanelQuiz_Evaluation.setVisible(true);
-            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-            ti.stop();
-        }
+        q.checkAnswer(jButtonQuiz_Answer3.getText(), counter);
+        setQuestion();
     }//GEN-LAST:event_jButtonQuiz_Answer3ActionPerformed
 
     private void jButtonQuiz_Answer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuiz_Answer4ActionPerformed
-        q.checkAnswer(jButtonQuiz_Answer4.getText(),counter);
-        counter=20;
-        jLabelQuiz_Counter.setText(counter+"");
-        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
-        boolean done = q.setAnswers(jTextAreaQuizQuestion,
-                jButtonQuiz_Answer1,
-                jButtonQuiz_Answer2,
-                jButtonQuiz_Answer3,
-                jButtonQuiz_Answer4);
-
-        if (done) {
-            jPanelQuiz_TheQuiz.setVisible(false);
-            jPanelQuiz_Evaluation.setVisible(true);
-            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
-            ti.stop();
-        }
+        q.checkAnswer(jButtonQuiz_Answer4.getText(), counter);
+        setQuestion();
     }//GEN-LAST:event_jButtonQuiz_Answer4ActionPerformed
 
     private void jButtonRegisterUserActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRegisterUserActionPerformed
@@ -1696,73 +1631,66 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     private void jButtonInsertImageActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonInsertImageActionPerformed
     {//GEN-HEADEREND:event_jButtonInsertImageActionPerformed
-        JFileChooser fileChooser = new JFileChooser(); 
-    fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
-    FileNameExtensionFilter filter = new FileNameExtensionFilter("*.IMAGE", "jpg","gif","png"); 
-    fileChooser.addChoosableFileFilter(filter);
-     int result = fileChooser.showSaveDialog(null);
-     if(result == JFileChooser.APPROVE_OPTION)
-    { 
-    File selectedFile = fileChooser.getSelectedFile(); 
-    String path = selectedFile.getAbsolutePath(); 
-    jLabelPic_CampRegister.setIcon(ResizeImage(path));
-     s = path; 
-    }
-else if(result == JFileChooser.CANCEL_OPTION)
-{ 
-System.out.println("No Data"); 
-}
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.IMAGE", "jpg", "gif", "png");
+        fileChooser.addChoosableFileFilter(filter);
+        int result = fileChooser.showSaveDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String path = selectedFile.getAbsolutePath();
+            jLabelPic_CampRegister.setIcon(ResizeImage(path));
+            s = path;
+        } else if (result == JFileChooser.CANCEL_OPTION) {
+            System.out.println("No Data");
+        }
     }//GEN-LAST:event_jButtonInsertImageActionPerformed
 
     private void jButtonSaveCampActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonSaveCampActionPerformed
     {//GEN-HEADEREND:event_jButtonSaveCampActionPerformed
-       DB.RegisterCamp(jTextFieldGroupName.getText(), s);
-       
-            jPanelMap.setVisible(false);
-            jPanelHome.setVisible(false);
-            jPanelQuiz.setVisible(false);
-            jPanelInfo.setVisible(false);
-            jPanelCamp.setVisible(true);
-            jPanelCamp_Info.setVisible(true);
-            jPanelCamp_Join.setVisible(false);
-            jPanelCamp_Register_Camp.setVisible(false);
-            jPanelCamp_Register_User.setVisible(false);
-            jLabelCampInfo_CampName.setText( DB.getMyCampName() );
-            
-            // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
-            Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(),Image.SCALE_SMOOTH);
-            ImageIcon newImage = new ImageIcon(myImg);
-            jLabelPic_CampInfo.setIcon(newImage);
-            
-            // Update the member list.
-            DB.getCampMemberCount();
-            DB.setMyCampPoints(); // This updates the camps points, as it is based on an average.
-            jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
-            jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
-             
-             String[] temp;
-             String memberList = DB.getCampMemberNames();
-             String delimiter = ",";
-             temp = memberList.split(delimiter);
-             int Points = 0;
-             for(int i = 0; i < temp.length ; i++)
-             {
-                 Points = DB.getCampMemberPoints(temp[i]);
-                 jTextArea1.append( (i+1) + ":["+temp[i]+"] P: " + Points + "\n" );
-             }
+        DB.RegisterCamp(jTextFieldGroupName.getText(), s);
+
+        jPanelMap.setVisible(false);
+        jPanelHome.setVisible(false);
+        jPanelQuiz.setVisible(false);
+        jPanelInfo.setVisible(false);
+        jPanelCamp.setVisible(true);
+        jPanelCamp_Info.setVisible(true);
+        jPanelCamp_Join.setVisible(false);
+        jPanelCamp_Register_Camp.setVisible(false);
+        jPanelCamp_Register_User.setVisible(false);
+        jLabelCampInfo_CampName.setText(DB.getMyCampName());
+
+        // Getting the image from DB then scaling it and turning it into an icon, before parsing it to the label. ^_^
+        Image myImg = DB.getCampImage().getScaledInstance(jLabelPic_CampInfo.getWidth(), jLabelPic_CampInfo.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon newImage = new ImageIcon(myImg);
+        jLabelPic_CampInfo.setIcon(newImage);
+
+        // Update the member list.
+        DB.getCampMemberCount();
+        DB.setMyCampPoints(); // This updates the camps points, as it is based on an average.
+        jTextFieldTotalPoints.setText(DB.getMyCampPoints() + " Points");
+        jTextArea1.setText(null); // This removes the text before adding it and makes sure we have no duplicates.
+
+        String[] temp;
+        String memberList = DB.getCampMemberNames();
+        String delimiter = ",";
+        temp = memberList.split(delimiter);
+        int Points = 0;
+        for (int i = 0; i < temp.length; i++) {
+            Points = DB.getCampMemberPoints(temp[i]);
+            jTextArea1.append((i + 1) + ":[" + temp[i] + "] P: " + Points + "\n");
+        }
     }//GEN-LAST:event_jButtonSaveCampActionPerformed
 
     private void jButtonEditCampActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonEditCampActionPerformed
     {//GEN-HEADEREND:event_jButtonEditCampActionPerformed
-          if( DB.getMyCampID() != 0 )
-        {
+        if (DB.getMyCampID() != 0) {
             jPanelCamp_Info.setVisible(false);
             jPanelCamp_Register_Camp.setVisible(true);
         }
     }//GEN-LAST:event_jButtonEditCampActionPerformed
 
-    
-     
     /**
      * @param args the command line arguments
      */
@@ -1800,29 +1728,47 @@ System.out.println("No Data");
 
     //The Logic:
     Quiz q = new Quiz();
-    
+
     ActionListener action = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(counter == 0){
-                ti.restart();
+            if (counter == 0) {
+                setQuestion();
             }
             counter--;
-            jLabelQuiz_Counter.setText(counter+"");
+            jLabelQuiz_Counter.setText(counter + "");
         }
     };
-    
+
     //Method to resize the ImageIcon
-    public ImageIcon ResizeImage(String imgPath)
-    {
+    public ImageIcon ResizeImage(String imgPath) {
         ImageIcon MyImage = new ImageIcon(imgPath);
         Image img = MyImage.getImage();
-        Image newImage = img.getScaledInstance(jLabelPic_CampRegister.getWidth(), jLabelPic_CampRegister.getHeight(),Image.SCALE_SMOOTH);
+        Image newImage = img.getScaledInstance(jLabelPic_CampRegister.getWidth(), jLabelPic_CampRegister.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon image = new ImageIcon(newImage);
         return image;
     }
-    
-    
+
+    public void setQuestion() {
+        counter = 20;
+        jLabelQuiz_Counter.setText(counter + "");
+        jLabelQuiz_TotalPoints.setText(q.getPointsAsString());
+        boolean done = q.setAnswers(jTextAreaQuizQuestion,
+                jButtonQuiz_Answer1,
+                jButtonQuiz_Answer2,
+                jButtonQuiz_Answer3,
+                jButtonQuiz_Answer4);
+
+        if (done) {
+            jPanelQuiz_TheQuiz.setVisible(false);
+            jPanelQuiz_Evaluation.setVisible(true);
+            jLabelQuizPointsQuiz.setText(q.getPointsAsString());
+            ti.stop();
+
+        }
+    }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEditCamp;
     private javax.swing.JButton jButtonEnterQuiz;
@@ -1929,8 +1875,5 @@ System.out.println("No Data");
     private javax.swing.JTextField jTextFieldTotalPoints;
     private javax.swing.JTextField jTextFieldUserName;
     // End of variables declaration//GEN-END:variables
-
-
-
 
 }
