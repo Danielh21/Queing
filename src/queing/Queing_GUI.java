@@ -19,8 +19,10 @@ public class Queing_GUI extends javax.swing.JFrame {
 
     public static String s; // For image path.
     private Timer ti;
+    private Timer homePageTimer;
     private int counter = 20;
     Database DB;
+    CounterClass cn = new CounterClass();
 
     boolean running = false;
 
@@ -32,6 +34,9 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelCamp.setVisible(false);
         jPanelQuiz.setVisible(false);
         jPanelInfo.setVisible(false);
+        homeCounter();
+        homePageTimer= new Timer(1000, homeCounter);
+        homePageTimer.start();
 
         /* 
          Lige nu har jeg sat borders til alle panels, for at se hvor store de er, 
@@ -1783,7 +1788,18 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         }
     }
+    
+    final public void homeCounter(){
+      cn.Countertime(jLabelCounter);
+    }
 
+    ActionListener homeCounter = new ActionListener() {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            homeCounter();
+        }
+    };
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEditCamp;
