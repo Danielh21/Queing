@@ -173,6 +173,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         setTitle("Roskilde Festival");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
+        setResizable(false);
         setSize(new java.awt.Dimension(458, 354));
 
         jPanelHome.setBackground(new java.awt.Color(42, 57, 102));
@@ -191,11 +192,13 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jLabelPic_Orange.setBackground(new java.awt.Color(255, 102, 0));
         jLabelPic_Orange.setForeground(new java.awt.Color(255, 102, 0));
+        jLabelPic_Orange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPic_Orange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/HomeScreen.jpg"))); // NOI18N
 
         jLabelCounter.setBackground(new java.awt.Color(255, 102, 0));
         jLabelCounter.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabelCounter.setForeground(new java.awt.Color(255, 102, 0));
+        jLabelCounter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelCounter.setText("<html>Roskilde Counter : <br> 222 Days, 21 Hours, 24 Minutes </html>");
 
         javax.swing.GroupLayout jPanelHomeLayout = new javax.swing.GroupLayout(jPanelHome);
@@ -206,13 +209,12 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addComponent(jLabelCounter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addComponent(jLabelHome)
                         .addGap(31, 31, 31))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
-                        .addComponent(jLabelPic_Orange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelCounter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+                            .addComponent(jLabelPic_Orange, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         jPanelHomeLayout.setVerticalGroup(
@@ -926,15 +928,17 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_TheQuiz.setBackground(new java.awt.Color(42, 57, 102));
 
+        jScrollPane8.setBorder(null);
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextAreaQuizQuestion.setBackground(new java.awt.Color(42, 57, 102));
         jTextAreaQuizQuestion.setColumns(20);
         jTextAreaQuizQuestion.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jTextAreaQuizQuestion.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuizQuestion.setRows(5);
         jTextAreaQuizQuestion.setText("Question Goes Here");
-        jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextAreaQuizQuestion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(42, 57, 102)));
         jTextAreaQuizQuestion.setCaretColor(new java.awt.Color(42, 57, 102));
         jTextAreaQuizQuestion.setFocusable(false);
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
@@ -1250,11 +1254,11 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1266,7 +1270,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 567, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
         );
@@ -1627,8 +1631,8 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_Evaluation.setVisible(false);
         jPanelQuiz_Done.setVisible(true);
         jLabelQuizDonePoints.setText(q.getPointsAsString());
-        jLabelQuiz_Done_TeamPoints.setText(""+DB.getMyCampPoints());
         DB.setMyPoints(q.getPoints());
+        jLabelQuiz_Done_TeamPoints.setText(""+DB.getMyCampPoints());
         running = false;
     }//GEN-LAST:event_jButtonQuizRateActionPerformed
 

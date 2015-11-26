@@ -26,9 +26,14 @@ class CounterClass {
         int noSec = ((seconds % (24 * 60 * 60)) % (60 * 60)) % 60;
 
         
-       jLabelCounter.setText("<html>Roskilde Counter:<br>" + noOfDays + " Days, "
+       jLabelCounter.setText("<html><"+ spaces() +"Roskilde Counter:<br>" + noOfDays + " Days, "
                 + noOfHours + " Hours, " + noOfMinutes + " Minutes, " + noSec + " Seconds</html>");
 
     }
 
+    
+    String spaces(){
+        return  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+              + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; 
+    }
 }
