@@ -160,7 +160,7 @@
                       <Component id="jLabelPic_Orange" min="-2" pref="222" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jLabelCounter" min="-2" pref="63" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="78" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -844,7 +844,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabePic_Map" alignment="0" pref="524" max="32767" attributes="0"/>
+                  <Component id="jLabePic_Map" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabelMap" min="-2" pref="391" max="-2" attributes="0"/>
@@ -865,7 +865,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelMap1" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jLabePic_Map" pref="431" max="32767" attributes="0"/>
+                      <Component id="jLabePic_Map" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1004,7 +1004,7 @@
                                       <Component id="jButtonEnterQuiz" min="-2" pref="183" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="46" max="32767" attributes="0"/>
+                              <EmptySpace pref="24" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1114,7 +1114,7 @@
                                       <Component id="jLabelQuizRateNumber1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       <Component id="jLabelQuizRateNumber2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                                      <EmptySpace pref="26" max="32767" attributes="0"/>
                                       <Component id="jLabelQuizRateNumber3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       <Component id="jLabelQuizRateNumber4" min="-2" max="-2" attributes="0"/>
@@ -1166,7 +1166,7 @@
                           <Color blue="0" green="66" red="ff" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Quiz Completed! &lt;br&gt;We Hoped You enjoyed&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Quiz Completed! &lt;br&gt;We Hope You enjoyed our quiz!&lt;/html&gt;"/>
                         <Property name="horizontalTextPosition" type="int" value="0"/>
                       </Properties>
                     </Component>
@@ -1328,7 +1328,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="36" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1507,7 +1507,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane8" pref="482" max="32767" attributes="0"/>
+                          <Component id="jScrollPane8" pref="458" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jButtonQuiz_Answer1" pref="233" max="32767" attributes="0"/>
@@ -1566,6 +1566,9 @@
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane8">
                       <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="null"/>
+                        </Property>
                         <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
                         <Property name="verticalScrollBarPolicy" type="int" value="21"/>
                       </Properties>
@@ -1577,6 +1580,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="jTextAreaQuizQuestion">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="66" green="39" red="2a" type="rgb"/>
+                            </Property>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Verdana" size="24" style="3"/>
@@ -1587,14 +1593,15 @@
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="Question Goes Here"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                                <BevelBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                             <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="66" green="39" red="2a" type="rgb"/>
                             </Property>
                             <Property name="focusable" type="boolean" value="false"/>
+                            <Property name="selectedTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="66" green="39" red="2a" type="rgb"/>
+                            </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1877,7 +1884,7 @@
                               <Color blue="0" green="66" red="ff" type="rgb"/>
                             </Property>
                             <Property name="rows" type="int" value="5"/>
-                            <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Micheal Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson(August 29, 1958 &#x2013; June 25, 2009)&#xa;was an American singer, songwriter, record producer, &#xa;dancer, and actor. Called the King of Pop, his contributions &#xa;to music and dance, along with his publicized personal life, &#xa;made him a global figure in popular culture for over four &#xa;decades.&#xa;&#xa;Jackson founded the Heal the World Foundation in 1992. &#xa;The charity organization brought underprivileged children &#xa;to Jackson&apos;s ranch to enjoy theme park rides that Jackson &#xa;had built on the property. The foundation also sent millions&#xa;of dollars around the globe to help children threatened by &#xa;war, poverty, and disease. In the same year, Jackson &#xa;published his second book, the bestselling collection of &#xa;poetry, Dancing the Dream.&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
+                            <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Michael Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson(August 29, 1958 &#x2013; June 25, 2009)&#xa;was an American singer, songwriter, record producer, &#xa;dancer, and actor. Called the King of Pop, his contributions &#xa;to music and dance, along with his publicized personal life, &#xa;made him a global figure in popular culture for over four &#xa;decades.&#xa;&#xa;Jackson founded the Heal the World Foundation in 1992. &#xa;The charity organization brought underprivileged children &#xa;to Jackson&apos;s ranch to enjoy theme park rides that Jackson &#xa;had built on the property. The foundation also sent millions&#xa;of dollars around the globe to help children threatened by &#xa;war, poverty, and disease. In the same year, Jackson &#xa;published his second book, the bestselling collection of &#xa;poetry, Dancing the Dream.&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
                           </Properties>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextAreaArtist.grabFocus();&#xa;jTextAreaArtist.setCaretPosition(20);"/>

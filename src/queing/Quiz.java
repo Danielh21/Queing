@@ -25,10 +25,10 @@ public class Quiz {
 
     private ArrayList<String[]> quiz = new ArrayList<String[]>();
     private String[] q1 = {"When was the first\nRoskilde held?", "1971", "1980", "1991", "2001", "1971"};
-    private String[] q2 = {"Which of these artist\nare performning?", "Madonna", "Elvis", "Micheal Jackson", "Bent", "Micheal Jackson"};
+    private String[] q2 = {"Which of these artists\nare performing?", "Madonna", "Elvis", "Michael Jackson", "Bent", "Micheal Jackson"};
     private String[] q3 = {"How many stages does\nRoskilde Festival have?", "4", "8", "10", "12", "8"};
     private String[] q4 = {"How many different exits\ndoes Roskilde Festival have?", "1", "3", "5", "2", "5"};
-    private String[] q5 = {"Does Roskilde donate\ntheir profit?", "Yes", "No", "Maybe", "Call me Maybe", "Yes"};
+    private String[] q5 = {"Does Roskilde donate\ntheir profits?", "Yes", "No", "Maybe", "Call me Maybe", "Yes"};
     private String[] q6 = {"How many attendees does\nRoskilde Festival have?", "2", "3333", "80.000", "1.000.000", "80.000"};
     private boolean running = true;
     private int numOfQsAns = 0;

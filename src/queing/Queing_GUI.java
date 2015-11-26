@@ -224,7 +224,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addComponent(jLabelPic_Orange, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabelCounter, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 78, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanelCamp.setBackground(new java.awt.Color(42, 57, 102));
@@ -620,7 +620,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelMap.setLayout(jPanelMapLayout);
         jPanelMapLayout.setHorizontalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+            .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMapLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -638,7 +638,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelMap1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
+                .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -687,7 +687,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                     .addGroup(jPanelQuiz_IntroLayout.createSequentialGroup()
                         .addGap(127, 127, 127)
                         .addComponent(jButtonEnterQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanelQuiz_IntroLayout.setVerticalGroup(
             jPanelQuiz_IntroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -706,7 +706,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelQuizFinal.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabelQuizFinal.setForeground(new java.awt.Color(255, 102, 0));
         jLabelQuizFinal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelQuizFinal.setText("<html>Quiz Completed! <br>We Hoped You enjoyed</html>");
+        jLabelQuizFinal.setText("<html>Quiz Completed! <br>We Hope You enjoyed our quiz!</html>");
         jLabelQuizFinal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelQuizPointsQuiz.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
@@ -793,7 +793,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                         .addComponent(jLabelQuizRateNumber1)
                         .addGap(59, 59, 59)
                         .addComponent(jLabelQuizRateNumber2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                         .addComponent(jLabelQuizRateNumber3)
                         .addGap(59, 59, 59)
                         .addComponent(jLabelQuizRateNumber4)
@@ -900,7 +900,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                             .addComponent(jLabelQuiz_Done_TeamPoints)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jLabelQuiz_Done_TeamPoints1))))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelQuiz_DoneLayout.setVerticalGroup(
             jPanelQuiz_DoneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -926,17 +926,20 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jPanelQuiz_TheQuiz.setBackground(new java.awt.Color(42, 57, 102));
 
+        jScrollPane8.setBorder(null);
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextAreaQuizQuestion.setBackground(new java.awt.Color(42, 57, 102));
         jTextAreaQuizQuestion.setColumns(20);
         jTextAreaQuizQuestion.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jTextAreaQuizQuestion.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaQuizQuestion.setRows(5);
         jTextAreaQuizQuestion.setText("Question Goes Here");
-        jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextAreaQuizQuestion.setBorder(null);
         jTextAreaQuizQuestion.setCaretColor(new java.awt.Color(42, 57, 102));
         jTextAreaQuizQuestion.setFocusable(false);
+        jTextAreaQuizQuestion.setSelectedTextColor(new java.awt.Color(42, 57, 102));
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
 
         jButtonQuiz_Answer1.setText("Answer1");
@@ -1015,7 +1018,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelQuiz_TheQuiz.setLayout(jPanelQuiz_TheQuizLayout);
         jPanelQuiz_TheQuizLayout.setHorizontalGroup(
             jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
             .addGroup(jPanelQuiz_TheQuizLayout.createSequentialGroup()
                 .addGroup(jPanelQuiz_TheQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonQuiz_Answer1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
@@ -1118,7 +1121,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaArtist.setFont(new java.awt.Font("Verdana", 3, 14)); // NOI18N
         jTextAreaArtist.setForeground(new java.awt.Color(255, 102, 0));
         jTextAreaArtist.setRows(5);
-        jTextAreaArtist.setText("The Artists On Roskilde:\n\nSelena Gomez:\nSelena Marie Gomez (1992) is an American actress, \nsinger and fashion designer.[1] Born and raised in \nGrand Prairie, Texas, she was first featured on the \nchildren's series Barney & Friends in the early 2000s.[5] \nIn 2007, Gomez came to prominence after being cast in \nthe Disney Channel television series Wizards of Waverly \nPlace. She portrayed the starring character Alex Russo \nuntil its conclusion in 2012. She formed her band \nSelena Gomez & the Scene after signing a recording \ncontract with Hollywood Records in 2008; they released \nthe studio albums Kiss & Tell (2009), \nA Year Without Rain (2010), and When the \nSun Goes Down (2011) before beginning a hiatus \nin 2012.\n\nMicheal Jackson:\n(HOLOGRAM)\nMichael Joseph Jackson(August 29, 1958 – June 25, 2009)\nwas an American singer, songwriter, record producer, \ndancer, and actor. Called the King of Pop, his contributions \nto music and dance, along with his publicized personal life, \nmade him a global figure in popular culture for over four \ndecades.\n\nJackson founded the Heal the World Foundation in 1992. \nThe charity organization brought underprivileged children \nto Jackson's ranch to enjoy theme park rides that Jackson \nhad built on the property. The foundation also sent millions\nof dollars around the globe to help children threatened by \nwar, poverty, and disease. In the same year, Jackson \npublished his second book, the bestselling collection of \npoetry, Dancing the Dream.\n\nEminem:\nMarshall Bruce Mathers III (born October 17, 1972),\nbest known by his stage name, Eminem,\nis an American rapper, record producer, actor, and \nsongwriter. Eminem is from Detroit, Michigan. \nIn addition to his solo career, he is a member of D12 and\n(with Royce da 5'9\").");
+        jTextAreaArtist.setText("The Artists On Roskilde:\n\nSelena Gomez:\nSelena Marie Gomez (1992) is an American actress, \nsinger and fashion designer.[1] Born and raised in \nGrand Prairie, Texas, she was first featured on the \nchildren's series Barney & Friends in the early 2000s.[5] \nIn 2007, Gomez came to prominence after being cast in \nthe Disney Channel television series Wizards of Waverly \nPlace. She portrayed the starring character Alex Russo \nuntil its conclusion in 2012. She formed her band \nSelena Gomez & the Scene after signing a recording \ncontract with Hollywood Records in 2008; they released \nthe studio albums Kiss & Tell (2009), \nA Year Without Rain (2010), and When the \nSun Goes Down (2011) before beginning a hiatus \nin 2012.\n\nMichael Jackson:\n(HOLOGRAM)\nMichael Joseph Jackson(August 29, 1958 – June 25, 2009)\nwas an American singer, songwriter, record producer, \ndancer, and actor. Called the King of Pop, his contributions \nto music and dance, along with his publicized personal life, \nmade him a global figure in popular culture for over four \ndecades.\n\nJackson founded the Heal the World Foundation in 1992. \nThe charity organization brought underprivileged children \nto Jackson's ranch to enjoy theme park rides that Jackson \nhad built on the property. The foundation also sent millions\nof dollars around the globe to help children threatened by \nwar, poverty, and disease. In the same year, Jackson \npublished his second book, the bestselling collection of \npoetry, Dancing the Dream.\n\nEminem:\nMarshall Bruce Mathers III (born October 17, 1972),\nbest known by his stage name, Eminem,\nis an American rapper, record producer, actor, and \nsongwriter. Eminem is from Detroit, Michigan. \nIn addition to his solo career, he is a member of D12 and\n(with Royce da 5'9\").");
         jTextAreaArtist.grabFocus();
         jTextAreaArtist.setCaretPosition(20);
         jScrollPane2.setViewportView(jTextAreaArtist);
