@@ -89,7 +89,6 @@ public class Database {
             while(rs.next())
             {
                 myID = rs.getInt("id") + 1;
-                st.close();
             }
             
             
@@ -150,7 +149,7 @@ public class Database {
               if( ars.getInt("Admin") == 1 ) Editing = true;
               else Editing = false;
             }
-            st.close();
+           
 
             if( !Editing )
             {
@@ -163,7 +162,7 @@ public class Database {
                     campID = rs.getInt("id") + 1;
                     memberCount = rs.getInt("memberCount") + 1;
                 }
-                st.close();
+                
                 
                 if( campID == 0 ) campID = 1; // campID must not be 0. Messes with campid detection in main program.
                 ps = conn.prepareStatement("insert into camp(ID, name, image, memberCount) values(?,?,?,?)");
@@ -192,7 +191,7 @@ public class Database {
                   uprs.updateInt("campID", campID);
                   uprs.updateInt("Admin", 1);
                   uprs.updateRow();
-                  st.close();
+               
                }
                
             }
@@ -411,7 +410,6 @@ public class Database {
             {
  
                 campID = rs.getInt("id");  
-                sts.close();
  
             }
             
@@ -554,20 +552,14 @@ public class Database {
            JOptionPane.showMessageDialog( null, "Could not connect to remote DB, connecting to local DB." ); 
            url = "jdbc:mysql://localhost:3306/account";
            conn = new DBConnection().connect(url);
+            if(conn != null)
+            {
+                return true;
+            }
        }
-      
-       
-       if(conn != null)
-       {
-           return true;
-       }
-       else
-       {
-           return false;
-       }
-       
-       
-       
+  
+       return false;
+
        
    }
     
