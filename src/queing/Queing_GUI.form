@@ -28,7 +28,6 @@
     <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
       <Point value="[0, 0]"/>
     </Property>
-    <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[458, 354]"/>
     </Property>
@@ -137,14 +136,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <Component id="jLabelCounter" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
                               <Component id="jLabelHome" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabelCounter" alignment="0" pref="482" max="32767" attributes="0"/>
-                                  <Component id="jLabelPic_Orange" pref="482" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabelPic_Orange" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -192,7 +192,6 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="66" red="ff" type="rgb"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Pics/HomeScreen.jpg"/>
                 </Property>
@@ -209,7 +208,6 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="66" red="ff" type="rgb"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Roskilde Counter : &lt;br&gt; 222 Days, 21 Hours, 24 Minutes &lt;/html&gt;"/>
               </Properties>
             </Component>
@@ -1568,9 +1566,6 @@
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane8">
                       <Properties>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="null"/>
-                        </Property>
                         <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
                         <Property name="verticalScrollBarPolicy" type="int" value="21"/>
                       </Properties>
@@ -1582,9 +1577,6 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="jTextAreaQuizQuestion">
                           <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="66" green="39" red="2a" type="rgb"/>
-                            </Property>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Verdana" size="24" style="3"/>
@@ -1595,10 +1587,8 @@
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="Question Goes Here"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="39" red="2a" type="rgb"/>
-                                </LineBorder>
+                              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                                <BevelBorder/>
                               </Border>
                             </Property>
                             <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1819,7 +1809,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButtonInfo_Artist">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Artist"/>
+                <Property name="text" type="java.lang.String" value="Artists"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInfo_ArtistActionPerformed"/>
@@ -1887,7 +1877,7 @@
                               <Color blue="0" green="66" red="ff" type="rgb"/>
                             </Property>
                             <Property name="rows" type="int" value="5"/>
-                            <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Micheal Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson (29. august 1958 &#x2013; 25. juni 2009)&#xa;med tilnavnet &quot;Kongen af Pop&quot; var en amerikansk musiker &#xa;og en af de mest kommercielt succesrige entertainere.&#xa;Hans unikke bidrag til musik og dans og hans privatliv, &#xa;gjorde ham til en fremtr&#xe6;dende figur inden for &#xa;popul&#xe6;rkulturen i fire &#xe5;rtier.&#xa;&#xa;Han er to gange optaget i Rock and Roll Hall of Fame, &#xa;har flere rekorder i Guinness Rekordbog &#x2014; deriblandt &#xa;&quot;Mest succesrige entertainer nogensinde&quot; &#x2014; &#xa;13 Grammy Awards, 13 singler som har ligget nr. 1 p&#xe5; &#xa;hitlisten i USA, og et ansl&#xe5;et samlet salgstal p&#xe5; over &#xa;750 millioner plader. Han var en betydelig filantropisk og&#xa; humanit&#xe6;r sponsor af mange millioner dollars til 39 &#xa;velg&#xf8;renhedsorganisationer og skaffede ogs&#xe5; bidrag via &#xa;sin egen Heal the World Foundation.&#xa;&#xa;&#xa;&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
+                            <Property name="text" type="java.lang.String" value="The Artists On Roskilde:&#xa;&#xa;Selena Gomez:&#xa;Selena Marie Gomez (1992) is an American actress, &#xa;singer and fashion designer.[1] Born and raised in &#xa;Grand Prairie, Texas, she was first featured on the &#xa;children&apos;s series Barney &amp; Friends in the early 2000s.[5] &#xa;In 2007, Gomez came to prominence after being cast in &#xa;the Disney Channel television series Wizards of Waverly &#xa;Place. She portrayed the starring character Alex Russo &#xa;until its conclusion in 2012. She formed her band &#xa;Selena Gomez &amp; the Scene after signing a recording &#xa;contract with Hollywood Records in 2008; they released &#xa;the studio albums Kiss &amp; Tell (2009), &#xa;A Year Without Rain (2010), and When the &#xa;Sun Goes Down (2011) before beginning a hiatus &#xa;in 2012.&#xa;&#xa;Micheal Jackson:&#xa;(HOLOGRAM)&#xa;Michael Joseph Jackson(August 29, 1958 &#x2013; June 25, 2009)&#xa;was an American singer, songwriter, record producer, &#xa;dancer, and actor. Called the King of Pop, his contributions &#xa;to music and dance, along with his publicized personal life, &#xa;made him a global figure in popular culture for over four &#xa;decades.&#xa;&#xa;Jackson founded the Heal the World Foundation in 1992. &#xa;The charity organization brought underprivileged children &#xa;to Jackson&apos;s ranch to enjoy theme park rides that Jackson &#xa;had built on the property. The foundation also sent millions&#xa;of dollars around the globe to help children threatened by &#xa;war, poverty, and disease. In the same year, Jackson &#xa;published his second book, the bestselling collection of &#xa;poetry, Dancing the Dream.&#xa;&#xa;Eminem:&#xa;Marshall Bruce Mathers III (born October 17, 1972),&#xa;best known by his stage name, Eminem,&#xa;is an American rapper, record producer, actor, and &#xa;songwriter. Eminem is from Detroit, Michigan. &#xa;In addition to his solo career, he is a member of D12 and&#xa;(with Royce da 5&apos;9&quot;)."/>
                           </Properties>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextAreaArtist.grabFocus();&#xa;jTextAreaArtist.setCaretPosition(20);"/>
