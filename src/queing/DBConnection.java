@@ -30,8 +30,17 @@ public class DBConnection
             
             try
             {
-                DBConnection = (Connection) DriverManager.getConnection(url,"admin","142536");
-                        System.out.println("Database connected");
+               if( url.equals("jdbc:mysql://localhost:3306/account"))
+               {
+                    DBConnection = (Connection) DriverManager.getConnection(url,"root","");
+                    System.out.println("Connected to local database.");
+               }
+               else
+               {
+                    DBConnection = (Connection) DriverManager.getConnection(url,"admin","142536");
+                    System.out.println("Database connected");
+               }
+           
             }
             catch(SQLException se)
             {

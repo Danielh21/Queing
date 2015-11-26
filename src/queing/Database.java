@@ -544,12 +544,31 @@ public class Database {
     
    public boolean AccessDB()
    {
+
+       if( conn != null )
+       {      
+           return true;
+       }
+       else 
+       {
+           JOptionPane.showMessageDialog( null, "Could not connect to remote DB, connecting to local DB." ); 
+           url = "jdbc:mysql://localhost:3306/account";
+           conn = new DBConnection().connect(url);
+       }
+      
        
        if(conn != null)
        {
            return true;
        }
-       else return false;
+       else
+       {
+           return false;
+       }
+       
+       
+       
+       
    }
     
 }
