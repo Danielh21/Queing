@@ -102,6 +102,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelMap = new javax.swing.JPanel();
         jLabePic_Map = new javax.swing.JLabel();
         jLabelMap = new javax.swing.JLabel();
+        jLabelMap1 = new javax.swing.JLabel();
         jPanelQuiz = new javax.swing.JPanel();
         jLabelQuiz = new javax.swing.JLabel();
         jPanelQuiz_Control = new javax.swing.JPanel();
@@ -182,7 +183,9 @@ public class Queing_GUI extends javax.swing.JFrame {
         jLabelHome.setBackground(new java.awt.Color(255, 102, 0));
         jLabelHome.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
         jLabelHome.setForeground(new java.awt.Color(255, 102, 0));
-        jLabelHome.setText("<html>Welcome To<br>\n\n Roskilde 2016</html>");
+        jLabelHome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelHome.setText("<html>Welcome To<br>   Roskilde 2016</html>");
+        jLabelHome.setToolTipText("");
         jLabelHome.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabelHome.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
@@ -215,12 +218,13 @@ public class Queing_GUI extends javax.swing.JFrame {
         jPanelHomeLayout.setVerticalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelHomeLayout.createSequentialGroup()
-                .addComponent(jLabelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
+                .addComponent(jLabelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(jLabelPic_Orange, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabelCounter, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 78, Short.MAX_VALUE))
         );
 
         jPanelCamp.setBackground(new java.awt.Color(42, 57, 102));
@@ -369,7 +373,7 @@ public class Queing_GUI extends javax.swing.JFrame {
                 .addGroup(jPanelCamp_Register_CampLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCampName)
                     .addComponent(jTextFieldGroupName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         jPanelCamp_Info.setBackground(new java.awt.Color(42, 57, 102));
@@ -597,31 +601,44 @@ public class Queing_GUI extends javax.swing.JFrame {
 
         jLabePic_Map.setBackground(new java.awt.Color(255, 72, 12));
         jLabePic_Map.setForeground(new java.awt.Color(255, 102, 0));
+        jLabePic_Map.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabePic_Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Roskilde.jpg"))); // NOI18N
 
         jLabelMap.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
         jLabelMap.setForeground(new java.awt.Color(255, 102, 0));
         jLabelMap.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelMap.setText("<html> Map over Roskilde Festival\n\n</html>");
+        jLabelMap.setText("<html> Map over Roskilde  </html>");
         jLabelMap.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabelMap1.setFont(new java.awt.Font("Verdana", 3, 36)); // NOI18N
+        jLabelMap1.setForeground(new java.awt.Color(255, 102, 0));
+        jLabelMap1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelMap1.setText("<html>  Festival </html>");
+        jLabelMap1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanelMapLayout = new javax.swing.GroupLayout(jPanelMap);
         jPanelMap.setLayout(jPanelMapLayout);
         jPanelMapLayout.setHorizontalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMapLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58))
             .addGroup(jPanelMapLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(jLabelMap1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelMapLayout.setVerticalGroup(
             jPanelMapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMapLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabelMap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelMap1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabePic_Map, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -918,6 +935,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         jTextAreaQuizQuestion.setRows(5);
         jTextAreaQuizQuestion.setText("Question Goes Here");
         jTextAreaQuizQuestion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextAreaQuizQuestion.setCaretColor(new java.awt.Color(42, 57, 102));
         jTextAreaQuizQuestion.setFocusable(false);
         jScrollPane8.setViewportView(jTextAreaQuizQuestion);
 
@@ -975,7 +993,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabelQuiz_Counter)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane2Layout.createSequentialGroup()
                     .addGap(6, 6, 6)
@@ -1228,11 +1246,11 @@ public class Queing_GUI extends javax.swing.JFrame {
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelMap, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelMap, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1841,6 +1859,7 @@ public class Queing_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelInfo;
     private javax.swing.JLabel jLabelMap;
+    private javax.swing.JLabel jLabelMap1;
     private javax.swing.JLabel jLabelMemberList;
     private javax.swing.JLabel jLabelPassword;
     private javax.swing.JLabel jLabelPic_CampInfo;
