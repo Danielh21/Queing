@@ -173,6 +173,7 @@ public class Queing_GUI extends javax.swing.JFrame {
         setTitle("Roskilde Festival");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
+        setResizable(false);
         setSize(new java.awt.Dimension(458, 354));
 
         jPanelHome.setBackground(new java.awt.Color(42, 57, 102));
@@ -1253,11 +1254,11 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelCamp, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelHome, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+                .addComponent(jPanelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 504, Short.MAX_VALUE))
         );
         jLayeredPaneLayout.setVerticalGroup(
             jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1269,7 +1270,7 @@ public class Queing_GUI extends javax.swing.JFrame {
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelHome, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
+                .addComponent(jPanelQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, 567, Short.MAX_VALUE))
             .addGroup(jLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
         );

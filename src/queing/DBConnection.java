@@ -30,7 +30,7 @@ public class DBConnection
             
             try
             {
-               if( url.equals("jdbc:mysql://localhost:3306/account"))
+               if( url.equals("jdbc:derby://localhost:1527/account"))
                {
                     DBConnection = (Connection) DriverManager.getConnection(url,"root","");
                     System.out.println("Connected to local database.");

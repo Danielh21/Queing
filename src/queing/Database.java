@@ -550,7 +550,7 @@ public class Database {
        else 
        {
            JOptionPane.showMessageDialog( null, "Could not connect to remote DB, connecting to local DB." ); 
-           url = "jdbc:mysql://localhost:3306/account";
+           url = "jdbc:derby://localhost:1527/account";
            conn = new DBConnection().connect(url);
             if(conn != null)
             {
